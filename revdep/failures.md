@@ -1,78 +1,66 @@
-# bayesdfa
+# bayesmodels
 
 <details>
 
-* Version: 1.1.0
-* GitHub: https://github.com/fate-ewi/bayesdfa
-* Source code: https://github.com/cran/bayesdfa
-* Date/Publication: 2021-05-28 18:10:05 UTC
-* Number of recursive dependencies: 81
+* Version: 0.1.1
+* GitHub: https://github.com/AlbertoAlmuinha/bayesmodels
+* Source code: https://github.com/cran/bayesmodels
+* Date/Publication: 2021-06-28 21:30:02 UTC
+* Number of recursive dependencies: 258
 
-Run `cloud_details(, "bayesdfa")` for more info
+Run `cloud_details(, "bayesmodels")` for more info
 
 </details>
 
-## In both
-
-*   checking whether package ‘bayesdfa’ can be installed ... ERROR
-    ```
-    Installation failed.
-    See ‘/tmp/workdir/bayesdfa/new/bayesdfa.Rcheck/00install.out’ for details.
-    ```
-
-## Installation
+## Error before installation
 
 ### Devel
 
 ```
-* installing *source* package ‘bayesdfa’ ...
-** package ‘bayesdfa’ successfully unpacked and MD5 sums checked
-** using staged installation
-** libs
+* using log directory ‘/tmp/workdir/bayesmodels/new/bayesmodels.Rcheck’
+* using R version 4.0.3 (2020-10-10)
+* using platform: x86_64-pc-linux-gnu (64-bit)
+* using session charset: UTF-8
+* using options ‘--no-manual --no-build-vignettes’
+* checking for file ‘bayesmodels/DESCRIPTION’ ... OK
+* this is package ‘bayesmodels’ version ‘0.1.1’
+* package encoding: UTF-8
+* checking package namespace information ... OK
+* checking package dependencies ... ERROR
+Package required but not available: ‘bsts’
+
+See section ‘The DESCRIPTION file’ in the ‘Writing R Extensions’
+manual.
+* DONE
+Status: 1 ERROR
 
 
-g++ -std=gnu++14 -I"/opt/R/4.0.3/lib/R/include" -DNDEBUG -I"../inst/include" -I"/opt/R/4.0.3/lib/R/site-library/StanHeaders/include/src" -DBOOST_DISABLE_ASSERTS -DEIGEN_NO_DEBUG -DBOOST_MATH_OVERFLOW_ERROR_POLICY=errno_on_error -I'/opt/R/4.0.3/lib/R/site-library/BH/include' -I'/opt/R/4.0.3/lib/R/site-library/Rcpp/include' -I'/opt/R/4.0.3/lib/R/site-library/RcppEigen/include' -I'/opt/R/4.0.3/lib/R/site-library/RcppParallel/include' -I'/opt/R/4.0.3/lib/R/site-library/rstan/include' -I'/opt/R/4.0.3/lib/R/site-library/StanHeaders/include' -I/usr/local/include   -I'/opt/R/4.0.3/lib/R/site-library/RcppParallel/include' -D_REENTRANT -DSTAN_THREADS   -fpic  -g -O2  -c RcppExports.cpp -o RcppExports.o
-In file included from /opt/R/4.0.3/lib/R/site-library/RcppEigen/include/Eigen/Core:397,
-                 from /opt/R/4.0.3/lib/R/site-library/RcppEigen/include/Eigen/Dense:1,
-                 from /opt/R/4.0.3/lib/R/site-library/RcppEigen/include/RcppEigenForward.h:30,
-...
-/opt/R/4.0.3/lib/R/site-library/RcppEigen/include/Eigen/src/Core/ProductEvaluators.h:35:90:   required from ‘Eigen::internal::evaluator<Eigen::Product<Lhs, Rhs, Option> >::evaluator(const XprType&) [with Lhs = Eigen::Product<Eigen::CwiseBinaryOp<Eigen::internal::scalar_product_op<double, double>, const Eigen::CwiseNullaryOp<Eigen::internal::scalar_constant_op<double>, const Eigen::Matrix<double, 1, -1> >, const Eigen::Transpose<Eigen::Matrix<double, -1, 1> > >, Eigen::Matrix<double, -1, -1>, 0>; Rhs = Eigen::Matrix<double, -1, 1>; int Options = 0; Eigen::internal::evaluator<Eigen::Product<Lhs, Rhs, Option> >::XprType = Eigen::Product<Eigen::Product<Eigen::CwiseBinaryOp<Eigen::internal::scalar_product_op<double, double>, const Eigen::CwiseNullaryOp<Eigen::internal::scalar_constant_op<double>, const Eigen::Matrix<double, 1, -1> >, const Eigen::Transpose<Eigen::Matrix<double, -1, 1> > >, Eigen::Matrix<double, -1, -1>, 0>, Eigen::Matrix<double, -1, 1>, 0>]’
-/opt/R/4.0.3/lib/R/site-library/RcppEigen/include/Eigen/src/Core/Product.h:132:22:   required from ‘Eigen::internal::dense_product_base<Lhs, Rhs, Option, 6>::operator const Scalar() const [with Lhs = Eigen::Product<Eigen::CwiseBinaryOp<Eigen::internal::scalar_product_op<double, double>, const Eigen::CwiseNullaryOp<Eigen::internal::scalar_constant_op<double>, const Eigen::Matrix<double, 1, -1> >, const Eigen::Transpose<Eigen::Matrix<double, -1, 1> > >, Eigen::Matrix<double, -1, -1>, 0>; Rhs = Eigen::Matrix<double, -1, 1>; int Option = 0; Eigen::internal::dense_product_base<Lhs, Rhs, Option, 6>::Scalar = double]’
-/opt/R/4.0.3/lib/R/site-library/StanHeaders/include/src/stan/mcmc/hmc/hamiltonians/dense_e_metric.hpp:23:56:   required from ‘double stan::mcmc::dense_e_metric<Model, BaseRNG>::T(stan::mcmc::dense_e_point&) [with Model = model_dfa_namespace::model_dfa; BaseRNG = boost::random::additive_combine_engine<boost::random::linear_congruential_engine<unsigned int, 40014, 0, 2147483563>, boost::random::linear_congruential_engine<unsigned int, 40692, 0, 2147483399> >]’
-/opt/R/4.0.3/lib/R/site-library/StanHeaders/include/src/stan/mcmc/hmc/hamiltonians/dense_e_metric.hpp:22:10:   required from here
-/opt/R/4.0.3/lib/R/site-library/RcppEigen/include/Eigen/src/Core/DenseCoeffsBase.h:55:30: warning: ignoring attributes on template argument ‘Eigen::internal::packet_traits<double>::type’ {aka ‘__vector(2) double’} [-Wignored-attributes]
-g++: fatal error: Killed signal terminated program cc1plus
-compilation terminated.
-make: *** [/opt/R/4.0.3/lib/R/etc/Makeconf:179: stanExports_dfa.o] Error 1
-ERROR: compilation failed for package ‘bayesdfa’
-* removing ‘/tmp/workdir/bayesdfa/new/bayesdfa.Rcheck/bayesdfa’
+
 
 
 ```
 ### CRAN
 
 ```
-* installing *source* package ‘bayesdfa’ ...
-** package ‘bayesdfa’ successfully unpacked and MD5 sums checked
-** using staged installation
-** libs
+* using log directory ‘/tmp/workdir/bayesmodels/old/bayesmodels.Rcheck’
+* using R version 4.0.3 (2020-10-10)
+* using platform: x86_64-pc-linux-gnu (64-bit)
+* using session charset: UTF-8
+* using options ‘--no-manual --no-build-vignettes’
+* checking for file ‘bayesmodels/DESCRIPTION’ ... OK
+* this is package ‘bayesmodels’ version ‘0.1.1’
+* package encoding: UTF-8
+* checking package namespace information ... OK
+* checking package dependencies ... ERROR
+Package required but not available: ‘bsts’
+
+See section ‘The DESCRIPTION file’ in the ‘Writing R Extensions’
+manual.
+* DONE
+Status: 1 ERROR
 
 
-g++ -std=gnu++14 -I"/opt/R/4.0.3/lib/R/include" -DNDEBUG -I"../inst/include" -I"/opt/R/4.0.3/lib/R/site-library/StanHeaders/include/src" -DBOOST_DISABLE_ASSERTS -DEIGEN_NO_DEBUG -DBOOST_MATH_OVERFLOW_ERROR_POLICY=errno_on_error -I'/opt/R/4.0.3/lib/R/site-library/BH/include' -I'/opt/R/4.0.3/lib/R/site-library/Rcpp/include' -I'/opt/R/4.0.3/lib/R/site-library/RcppEigen/include' -I'/opt/R/4.0.3/lib/R/site-library/RcppParallel/include' -I'/opt/R/4.0.3/lib/R/site-library/rstan/include' -I'/opt/R/4.0.3/lib/R/site-library/StanHeaders/include' -I/usr/local/include   -I'/opt/R/4.0.3/lib/R/site-library/RcppParallel/include' -D_REENTRANT -DSTAN_THREADS   -fpic  -g -O2  -c RcppExports.cpp -o RcppExports.o
-In file included from /opt/R/4.0.3/lib/R/site-library/RcppEigen/include/Eigen/Core:397,
-                 from /opt/R/4.0.3/lib/R/site-library/RcppEigen/include/Eigen/Dense:1,
-                 from /opt/R/4.0.3/lib/R/site-library/RcppEigen/include/RcppEigenForward.h:30,
-...
-/opt/R/4.0.3/lib/R/site-library/RcppEigen/include/Eigen/src/Core/ProductEvaluators.h:35:90:   required from ‘Eigen::internal::evaluator<Eigen::Product<Lhs, Rhs, Option> >::evaluator(const XprType&) [with Lhs = Eigen::Product<Eigen::CwiseBinaryOp<Eigen::internal::scalar_product_op<double, double>, const Eigen::CwiseNullaryOp<Eigen::internal::scalar_constant_op<double>, const Eigen::Matrix<double, 1, -1> >, const Eigen::Transpose<Eigen::Matrix<double, -1, 1> > >, Eigen::Matrix<double, -1, -1>, 0>; Rhs = Eigen::Matrix<double, -1, 1>; int Options = 0; Eigen::internal::evaluator<Eigen::Product<Lhs, Rhs, Option> >::XprType = Eigen::Product<Eigen::Product<Eigen::CwiseBinaryOp<Eigen::internal::scalar_product_op<double, double>, const Eigen::CwiseNullaryOp<Eigen::internal::scalar_constant_op<double>, const Eigen::Matrix<double, 1, -1> >, const Eigen::Transpose<Eigen::Matrix<double, -1, 1> > >, Eigen::Matrix<double, -1, -1>, 0>, Eigen::Matrix<double, -1, 1>, 0>]’
-/opt/R/4.0.3/lib/R/site-library/RcppEigen/include/Eigen/src/Core/Product.h:132:22:   required from ‘Eigen::internal::dense_product_base<Lhs, Rhs, Option, 6>::operator const Scalar() const [with Lhs = Eigen::Product<Eigen::CwiseBinaryOp<Eigen::internal::scalar_product_op<double, double>, const Eigen::CwiseNullaryOp<Eigen::internal::scalar_constant_op<double>, const Eigen::Matrix<double, 1, -1> >, const Eigen::Transpose<Eigen::Matrix<double, -1, 1> > >, Eigen::Matrix<double, -1, -1>, 0>; Rhs = Eigen::Matrix<double, -1, 1>; int Option = 0; Eigen::internal::dense_product_base<Lhs, Rhs, Option, 6>::Scalar = double]’
-/opt/R/4.0.3/lib/R/site-library/StanHeaders/include/src/stan/mcmc/hmc/hamiltonians/dense_e_metric.hpp:23:56:   required from ‘double stan::mcmc::dense_e_metric<Model, BaseRNG>::T(stan::mcmc::dense_e_point&) [with Model = model_dfa_namespace::model_dfa; BaseRNG = boost::random::additive_combine_engine<boost::random::linear_congruential_engine<unsigned int, 40014, 0, 2147483563>, boost::random::linear_congruential_engine<unsigned int, 40692, 0, 2147483399> >]’
-/opt/R/4.0.3/lib/R/site-library/StanHeaders/include/src/stan/mcmc/hmc/hamiltonians/dense_e_metric.hpp:22:10:   required from here
-/opt/R/4.0.3/lib/R/site-library/RcppEigen/include/Eigen/src/Core/DenseCoeffsBase.h:55:30: warning: ignoring attributes on template argument ‘Eigen::internal::packet_traits<double>::type’ {aka ‘__vector(2) double’} [-Wignored-attributes]
-g++: fatal error: Killed signal terminated program cc1plus
-compilation terminated.
-make: *** [/opt/R/4.0.3/lib/R/etc/Makeconf:179: stanExports_dfa.o] Error 1
-ERROR: compilation failed for package ‘bayesdfa’
-* removing ‘/tmp/workdir/bayesdfa/old/bayesdfa.Rcheck/bayesdfa’
+
 
 
 ```
@@ -140,74 +128,6 @@ Status: 1 ERROR
 
 
 ```
-# CB2
-
-<details>
-
-* Version: 1.3.4
-* GitHub: NA
-* Source code: https://github.com/cran/CB2
-* Date/Publication: 2020-07-24 09:42:24 UTC
-* Number of recursive dependencies: 100
-
-Run `cloud_details(, "CB2")` for more info
-
-</details>
-
-## Error before installation
-
-### Devel
-
-```
-* using log directory ‘/tmp/workdir/CB2/new/CB2.Rcheck’
-* using R version 4.0.3 (2020-10-10)
-* using platform: x86_64-pc-linux-gnu (64-bit)
-* using session charset: UTF-8
-* using options ‘--no-manual --no-build-vignettes’
-* checking for file ‘CB2/DESCRIPTION’ ... OK
-* checking extension type ... Package
-* this is package ‘CB2’ version ‘1.3.4’
-* package encoding: UTF-8
-* checking package namespace information ... OK
-* checking package dependencies ... ERROR
-Package required but not available: ‘metap’
-
-See section ‘The DESCRIPTION file’ in the ‘Writing R Extensions’
-manual.
-* DONE
-Status: 1 ERROR
-
-
-
-
-
-```
-### CRAN
-
-```
-* using log directory ‘/tmp/workdir/CB2/old/CB2.Rcheck’
-* using R version 4.0.3 (2020-10-10)
-* using platform: x86_64-pc-linux-gnu (64-bit)
-* using session charset: UTF-8
-* using options ‘--no-manual --no-build-vignettes’
-* checking for file ‘CB2/DESCRIPTION’ ... OK
-* checking extension type ... Package
-* this is package ‘CB2’ version ‘1.3.4’
-* package encoding: UTF-8
-* checking package namespace information ... OK
-* checking package dependencies ... ERROR
-Package required but not available: ‘metap’
-
-See section ‘The DESCRIPTION file’ in the ‘Writing R Extensions’
-manual.
-* DONE
-Status: 1 ERROR
-
-
-
-
-
-```
 # cbar
 
 <details>
@@ -216,7 +136,7 @@ Status: 1 ERROR
 * GitHub: https://github.com/zedoul/cbar
 * Source code: https://github.com/cran/cbar
 * Date/Publication: 2017-10-24 13:20:22 UTC
-* Number of recursive dependencies: 63
+* Number of recursive dependencies: 61
 
 Run `cloud_details(, "cbar")` for more info
 
@@ -274,17 +194,17 @@ Status: 1 ERROR
 
 
 ```
-# diceR
+# DAISIE
 
 <details>
 
-* Version: 1.0.4
-* GitHub: https://github.com/AlineTalhouk/diceR
-* Source code: https://github.com/cran/diceR
-* Date/Publication: 2021-06-04 08:30:02 UTC
-* Number of recursive dependencies: 146
+* Version: 3.0.1
+* GitHub: NA
+* Source code: https://github.com/cran/DAISIE
+* Date/Publication: 2020-08-26 10:00:07 UTC
+* Number of recursive dependencies: 111
 
-Run `cloud_details(, "diceR")` for more info
+Run `cloud_details(, "DAISIE")` for more info
 
 </details>
 
@@ -293,18 +213,22 @@ Run `cloud_details(, "diceR")` for more info
 ### Devel
 
 ```
-* using log directory ‘/tmp/workdir/diceR/new/diceR.Rcheck’
+* using log directory ‘/tmp/workdir/DAISIE/new/DAISIE.Rcheck’
 * using R version 4.0.3 (2020-10-10)
 * using platform: x86_64-pc-linux-gnu (64-bit)
 * using session charset: UTF-8
 * using options ‘--no-manual --no-build-vignettes’
-* checking for file ‘diceR/DESCRIPTION’ ... OK
+* checking for file ‘DAISIE/DESCRIPTION’ ... OK
 * checking extension type ... Package
-* this is package ‘diceR’ version ‘1.0.4’
+* this is package ‘DAISIE’ version ‘3.0.1’
 * package encoding: UTF-8
 * checking package namespace information ... OK
-* checking package dependencies ... ERROR
-Package required but not available: ‘NMF’
+...
+Package required but not available: ‘DDD’
+
+Packages suggested but not available for checking: 'ggtree', 'phytools'
+
+Package which this enhances but not available for checking: ‘doMC’
 
 See section ‘The DESCRIPTION file’ in the ‘Writing R Extensions’
 manual.
@@ -319,18 +243,22 @@ Status: 1 ERROR
 ### CRAN
 
 ```
-* using log directory ‘/tmp/workdir/diceR/old/diceR.Rcheck’
+* using log directory ‘/tmp/workdir/DAISIE/old/DAISIE.Rcheck’
 * using R version 4.0.3 (2020-10-10)
 * using platform: x86_64-pc-linux-gnu (64-bit)
 * using session charset: UTF-8
 * using options ‘--no-manual --no-build-vignettes’
-* checking for file ‘diceR/DESCRIPTION’ ... OK
+* checking for file ‘DAISIE/DESCRIPTION’ ... OK
 * checking extension type ... Package
-* this is package ‘diceR’ version ‘1.0.4’
+* this is package ‘DAISIE’ version ‘3.0.1’
 * package encoding: UTF-8
 * checking package namespace information ... OK
-* checking package dependencies ... ERROR
-Package required but not available: ‘NMF’
+...
+Package required but not available: ‘DDD’
+
+Packages suggested but not available for checking: 'ggtree', 'phytools'
+
+Package which this enhances but not available for checking: ‘doMC’
 
 See section ‘The DESCRIPTION file’ in the ‘Writing R Extensions’
 manual.
@@ -342,81 +270,303 @@ Status: 1 ERROR
 
 
 ```
-# glmmfields
+# ecocomDP
 
 <details>
 
-* Version: 0.1.4
-* GitHub: https://github.com/seananderson/glmmfields
-* Source code: https://github.com/cran/glmmfields
-* Date/Publication: 2020-07-09 05:50:03 UTC
-* Number of recursive dependencies: 95
+* Version: 1.2.0
+* GitHub: https://github.com/EDIorg/ecocomDP
+* Source code: https://github.com/cran/ecocomDP
+* Date/Publication: 2021-10-18 22:50:05 UTC
+* Number of recursive dependencies: 152
 
-Run `cloud_details(, "glmmfields")` for more info
+Run `cloud_details(, "ecocomDP")` for more info
 
 </details>
 
-## In both
-
-*   checking whether package ‘glmmfields’ can be installed ... ERROR
-    ```
-    Installation failed.
-    See ‘/tmp/workdir/glmmfields/new/glmmfields.Rcheck/00install.out’ for details.
-    ```
-
-## Installation
+## Error before installation
 
 ### Devel
 
 ```
-* installing *source* package ‘glmmfields’ ...
-** package ‘glmmfields’ successfully unpacked and MD5 sums checked
-** using staged installation
-** libs
-"/opt/R/4.0.3/lib/R/bin/Rscript" -e "source(file.path('..', 'tools', 'make_cc.R')); make_cc(commandArgs(TRUE))" stan_files/glmmfields.stan
-Wrote C++ file "stan_files/glmmfields.cc"
-
-
-g++ -std=gnu++14 -I"/opt/R/4.0.3/lib/R/include" -DNDEBUG -I"../inst/include" -I"/opt/R/4.0.3/lib/R/site-library/StanHeaders/include/src" -DBOOST_DISABLE_ASSERTS -DEIGEN_NO_DEBUG -DBOOST_MATH_OVERFLOW_ERROR_POLICY=errno_on_error -I'/opt/R/4.0.3/lib/R/site-library/BH/include' -I'/opt/R/4.0.3/lib/R/site-library/Rcpp/include' -I'/opt/R/4.0.3/lib/R/site-library/RcppEigen/include' -I'/opt/R/4.0.3/lib/R/site-library/rstan/include' -I'/opt/R/4.0.3/lib/R/site-library/StanHeaders/include' -I/usr/local/include   -fpic  -g -O2  -c stan_files/glmmfields.cc -o stan_files/glmmfields.o
-In file included from /opt/R/4.0.3/lib/R/site-library/RcppEigen/include/Eigen/Core:397,
+* using log directory ‘/tmp/workdir/ecocomDP/new/ecocomDP.Rcheck’
+* using R version 4.0.3 (2020-10-10)
+* using platform: x86_64-pc-linux-gnu (64-bit)
+* using session charset: UTF-8
+* using options ‘--no-manual --no-build-vignettes’
+* checking for file ‘ecocomDP/DESCRIPTION’ ... OK
+* checking extension type ... Package
+* this is package ‘ecocomDP’ version ‘1.2.0’
+* package encoding: UTF-8
+* checking package namespace information ... OK
 ...
-/opt/R/4.0.3/lib/R/site-library/RcppEigen/include/Eigen/src/Core/Product.h:132:22:   required from ‘Eigen::internal::dense_product_base<Lhs, Rhs, Option, 6>::operator const Scalar() const [with Lhs = Eigen::Product<Eigen::CwiseBinaryOp<Eigen::internal::scalar_product_op<double, double>, const Eigen::CwiseNullaryOp<Eigen::internal::scalar_constant_op<double>, const Eigen::Matrix<double, 1, -1> >, const Eigen::Transpose<Eigen::Matrix<double, -1, 1> > >, Eigen::Matrix<double, -1, -1>, 0>; Rhs = Eigen::Matrix<double, -1, 1>; int Option = 0; Eigen::internal::dense_product_base<Lhs, Rhs, Option, 6>::Scalar = double]’
-/opt/R/4.0.3/lib/R/site-library/StanHeaders/include/src/stan/mcmc/hmc/hamiltonians/dense_e_metric.hpp:23:56:   required from ‘double stan::mcmc::dense_e_metric<Model, BaseRNG>::T(stan::mcmc::dense_e_point&) [with Model = model_glmmfields_namespace::model_glmmfields; BaseRNG = boost::random::additive_combine_engine<boost::random::linear_congruential_engine<unsigned int, 40014, 0, 2147483563>, boost::random::linear_congruential_engine<unsigned int, 40692, 0, 2147483399> >]’
-/opt/R/4.0.3/lib/R/site-library/StanHeaders/include/src/stan/mcmc/hmc/hamiltonians/dense_e_metric.hpp:22:10:   required from here
-/opt/R/4.0.3/lib/R/site-library/RcppEigen/include/Eigen/src/Core/DenseCoeffsBase.h:55:30: warning: ignoring attributes on template argument ‘Eigen::internal::packet_traits<double>::type’ {aka ‘__vector(2) double’} [-Wignored-attributes]
-g++: fatal error: Killed signal terminated program cc1plus
-compilation terminated.
-make: *** [/opt/R/4.0.3/lib/R/etc/Makeconf:179: stan_files/glmmfields.o] Error 1
-rm stan_files/glmmfields.cc
-ERROR: compilation failed for package ‘glmmfields’
-* removing ‘/tmp/workdir/glmmfields/new/glmmfields.Rcheck/glmmfields’
+* checking package vignettes in ‘inst/doc’ ... OK
+* checking running R code from vignettes ... NONE
+  ‘convert.Rmd’ using ‘UTF-8’... OK
+  ‘create.Rmd’ using ‘UTF-8’... OK
+  ‘model_overview.Rmd’ using ‘UTF-8’... OK
+  ‘shared_practices_create.Rmd’ using ‘UTF-8’... OK
+  ‘use.Rmd’ using ‘UTF-8’... OK
+* checking re-building of vignette outputs ... SKIPPED
+* DONE
+Status: 1 NOTE
+
+
+
 
 
 ```
 ### CRAN
 
 ```
-* installing *source* package ‘glmmfields’ ...
-** package ‘glmmfields’ successfully unpacked and MD5 sums checked
-** using staged installation
-** libs
-"/opt/R/4.0.3/lib/R/bin/Rscript" -e "source(file.path('..', 'tools', 'make_cc.R')); make_cc(commandArgs(TRUE))" stan_files/glmmfields.stan
-Wrote C++ file "stan_files/glmmfields.cc"
-
-
-g++ -std=gnu++14 -I"/opt/R/4.0.3/lib/R/include" -DNDEBUG -I"../inst/include" -I"/opt/R/4.0.3/lib/R/site-library/StanHeaders/include/src" -DBOOST_DISABLE_ASSERTS -DEIGEN_NO_DEBUG -DBOOST_MATH_OVERFLOW_ERROR_POLICY=errno_on_error -I'/opt/R/4.0.3/lib/R/site-library/BH/include' -I'/opt/R/4.0.3/lib/R/site-library/Rcpp/include' -I'/opt/R/4.0.3/lib/R/site-library/RcppEigen/include' -I'/opt/R/4.0.3/lib/R/site-library/rstan/include' -I'/opt/R/4.0.3/lib/R/site-library/StanHeaders/include' -I/usr/local/include   -fpic  -g -O2  -c stan_files/glmmfields.cc -o stan_files/glmmfields.o
-In file included from /opt/R/4.0.3/lib/R/site-library/RcppEigen/include/Eigen/Core:397,
+* using log directory ‘/tmp/workdir/ecocomDP/old/ecocomDP.Rcheck’
+* using R version 4.0.3 (2020-10-10)
+* using platform: x86_64-pc-linux-gnu (64-bit)
+* using session charset: UTF-8
+* using options ‘--no-manual --no-build-vignettes’
+* checking for file ‘ecocomDP/DESCRIPTION’ ... OK
+* checking extension type ... Package
+* this is package ‘ecocomDP’ version ‘1.2.0’
+* package encoding: UTF-8
+* checking package namespace information ... OK
 ...
-/opt/R/4.0.3/lib/R/site-library/RcppEigen/include/Eigen/src/Core/Product.h:132:22:   required from ‘Eigen::internal::dense_product_base<Lhs, Rhs, Option, 6>::operator const Scalar() const [with Lhs = Eigen::Product<Eigen::CwiseBinaryOp<Eigen::internal::scalar_product_op<double, double>, const Eigen::CwiseNullaryOp<Eigen::internal::scalar_constant_op<double>, const Eigen::Matrix<double, 1, -1> >, const Eigen::Transpose<Eigen::Matrix<double, -1, 1> > >, Eigen::Matrix<double, -1, -1>, 0>; Rhs = Eigen::Matrix<double, -1, 1>; int Option = 0; Eigen::internal::dense_product_base<Lhs, Rhs, Option, 6>::Scalar = double]’
-/opt/R/4.0.3/lib/R/site-library/StanHeaders/include/src/stan/mcmc/hmc/hamiltonians/dense_e_metric.hpp:23:56:   required from ‘double stan::mcmc::dense_e_metric<Model, BaseRNG>::T(stan::mcmc::dense_e_point&) [with Model = model_glmmfields_namespace::model_glmmfields; BaseRNG = boost::random::additive_combine_engine<boost::random::linear_congruential_engine<unsigned int, 40014, 0, 2147483563>, boost::random::linear_congruential_engine<unsigned int, 40692, 0, 2147483399> >]’
-/opt/R/4.0.3/lib/R/site-library/StanHeaders/include/src/stan/mcmc/hmc/hamiltonians/dense_e_metric.hpp:22:10:   required from here
-/opt/R/4.0.3/lib/R/site-library/RcppEigen/include/Eigen/src/Core/DenseCoeffsBase.h:55:30: warning: ignoring attributes on template argument ‘Eigen::internal::packet_traits<double>::type’ {aka ‘__vector(2) double’} [-Wignored-attributes]
-g++: fatal error: Killed signal terminated program cc1plus
-compilation terminated.
-make: *** [/opt/R/4.0.3/lib/R/etc/Makeconf:179: stan_files/glmmfields.o] Error 1
-rm stan_files/glmmfields.cc
-ERROR: compilation failed for package ‘glmmfields’
-* removing ‘/tmp/workdir/glmmfields/old/glmmfields.Rcheck/glmmfields’
+* checking package vignettes in ‘inst/doc’ ... OK
+* checking running R code from vignettes ... NONE
+  ‘convert.Rmd’ using ‘UTF-8’... OK
+  ‘create.Rmd’ using ‘UTF-8’... OK
+  ‘model_overview.Rmd’ using ‘UTF-8’... OK
+  ‘shared_practices_create.Rmd’ using ‘UTF-8’... OK
+  ‘use.Rmd’ using ‘UTF-8’... OK
+* checking re-building of vignette outputs ... SKIPPED
+* DONE
+Status: 1 NOTE
+
+
+
+
+
+```
+# galah
+
+<details>
+
+* Version: 1.3.1
+* GitHub: https://github.com/AtlasOfLivingAustralia/galah
+* Source code: https://github.com/cran/galah
+* Date/Publication: 2021-08-21 09:20:02 UTC
+* Number of recursive dependencies: 165
+
+Run `cloud_details(, "galah")` for more info
+
+</details>
+
+## Error before installation
+
+### Devel
+
+```
+* using log directory ‘/tmp/workdir/galah/new/galah.Rcheck’
+* using R version 4.0.3 (2020-10-10)
+* using platform: x86_64-pc-linux-gnu (64-bit)
+* using session charset: UTF-8
+* using options ‘--no-manual --no-build-vignettes’
+* checking for file ‘galah/DESCRIPTION’ ... OK
+* checking extension type ... Package
+* this is package ‘galah’ version ‘1.3.1’
+* package encoding: UTF-8
+* checking package namespace information ... OK
+...
+  Running ‘testthat.R’
+* checking for unstated dependencies in vignettes ... OK
+* checking package vignettes in ‘inst/doc’ ... OK
+* checking running R code from vignettes ... NONE
+  ‘galah.Rmd’ using ‘UTF-8’... OK
+  ‘international_atlases.Rmd’ using ‘UTF-8’... OK
+  ‘taxonomic_information.Rmd’ using ‘UTF-8’... OK
+* checking re-building of vignette outputs ... SKIPPED
+* DONE
+Status: 1 NOTE
+
+
+
+
+
+```
+### CRAN
+
+```
+* using log directory ‘/tmp/workdir/galah/old/galah.Rcheck’
+* using R version 4.0.3 (2020-10-10)
+* using platform: x86_64-pc-linux-gnu (64-bit)
+* using session charset: UTF-8
+* using options ‘--no-manual --no-build-vignettes’
+* checking for file ‘galah/DESCRIPTION’ ... OK
+* checking extension type ... Package
+* this is package ‘galah’ version ‘1.3.1’
+* package encoding: UTF-8
+* checking package namespace information ... OK
+...
+  Running ‘testthat.R’
+* checking for unstated dependencies in vignettes ... OK
+* checking package vignettes in ‘inst/doc’ ... OK
+* checking running R code from vignettes ... NONE
+  ‘galah.Rmd’ using ‘UTF-8’... OK
+  ‘international_atlases.Rmd’ using ‘UTF-8’... OK
+  ‘taxonomic_information.Rmd’ using ‘UTF-8’... OK
+* checking re-building of vignette outputs ... SKIPPED
+* DONE
+Status: 1 NOTE
+
+
+
+
+
+```
+# idiogramFISH
+
+<details>
+
+* Version: 2.0.6
+* GitHub: NA
+* Source code: https://github.com/cran/idiogramFISH
+* Date/Publication: 2021-09-30 12:00:02 UTC
+* Number of recursive dependencies: 190
+
+Run `cloud_details(, "idiogramFISH")` for more info
+
+</details>
+
+## Error before installation
+
+### Devel
+
+```
+* using log directory ‘/tmp/workdir/idiogramFISH/new/idiogramFISH.Rcheck’
+* using R version 4.0.3 (2020-10-10)
+* using platform: x86_64-pc-linux-gnu (64-bit)
+* using session charset: UTF-8
+* using options ‘--no-manual --no-build-vignettes’
+* checking for file ‘idiogramFISH/DESCRIPTION’ ... OK
+* this is package ‘idiogramFISH’ version ‘2.0.6’
+* package encoding: UTF-8
+* checking package namespace information ... OK
+* checking package dependencies ... NOTE
+...
+* checking files in ‘vignettes’ ... OK
+* checking examples ... OK
+* checking for unstated dependencies in vignettes ... OK
+* checking package vignettes in ‘inst/doc’ ... OK
+* checking running R code from vignettes ... NONE
+  ‘AVignette.Rmd’ using ‘UTF-8’... OK
+  ‘index.Rmd’ using ‘UTF-8’... OK
+* checking re-building of vignette outputs ... SKIPPED
+* DONE
+Status: 1 NOTE
+
+
+
+
+
+```
+### CRAN
+
+```
+* using log directory ‘/tmp/workdir/idiogramFISH/old/idiogramFISH.Rcheck’
+* using R version 4.0.3 (2020-10-10)
+* using platform: x86_64-pc-linux-gnu (64-bit)
+* using session charset: UTF-8
+* using options ‘--no-manual --no-build-vignettes’
+* checking for file ‘idiogramFISH/DESCRIPTION’ ... OK
+* this is package ‘idiogramFISH’ version ‘2.0.6’
+* package encoding: UTF-8
+* checking package namespace information ... OK
+* checking package dependencies ... NOTE
+...
+* checking files in ‘vignettes’ ... OK
+* checking examples ... OK
+* checking for unstated dependencies in vignettes ... OK
+* checking package vignettes in ‘inst/doc’ ... OK
+* checking running R code from vignettes ... NONE
+  ‘AVignette.Rmd’ using ‘UTF-8’... OK
+  ‘index.Rmd’ using ‘UTF-8’... OK
+* checking re-building of vignette outputs ... SKIPPED
+* DONE
+Status: 1 NOTE
+
+
+
+
+
+```
+# loon.ggplot
+
+<details>
+
+* Version: 1.3.0
+* GitHub: https://github.com/great-northern-diver/loon.ggplot
+* Source code: https://github.com/cran/loon.ggplot
+* Date/Publication: 2021-09-28 14:00:05 UTC
+* Number of recursive dependencies: 99
+
+Run `cloud_details(, "loon.ggplot")` for more info
+
+</details>
+
+## Error before installation
+
+### Devel
+
+```
+* using log directory ‘/tmp/workdir/loon.ggplot/new/loon.ggplot.Rcheck’
+* using R version 4.0.3 (2020-10-10)
+* using platform: x86_64-pc-linux-gnu (64-bit)
+* using session charset: UTF-8
+* using options ‘--no-manual --no-build-vignettes’
+* checking for file ‘loon.ggplot/DESCRIPTION’ ... OK
+* checking extension type ... Package
+* this is package ‘loon.ggplot’ version ‘1.3.0’
+* package encoding: UTF-8
+* checking package namespace information ... OK
+* checking package dependencies ... ERROR
+Package required but not available: ‘loon’
+
+Package suggested but not available for checking: ‘zenplots’
+
+See section ‘The DESCRIPTION file’ in the ‘Writing R Extensions’
+manual.
+* DONE
+Status: 1 ERROR
+
+
+
+
+
+```
+### CRAN
+
+```
+* using log directory ‘/tmp/workdir/loon.ggplot/old/loon.ggplot.Rcheck’
+* using R version 4.0.3 (2020-10-10)
+* using platform: x86_64-pc-linux-gnu (64-bit)
+* using session charset: UTF-8
+* using options ‘--no-manual --no-build-vignettes’
+* checking for file ‘loon.ggplot/DESCRIPTION’ ... OK
+* checking extension type ... Package
+* this is package ‘loon.ggplot’ version ‘1.3.0’
+* package encoding: UTF-8
+* checking package namespace information ... OK
+* checking package dependencies ... ERROR
+Package required but not available: ‘loon’
+
+Package suggested but not available for checking: ‘zenplots’
+
+See section ‘The DESCRIPTION file’ in the ‘Writing R Extensions’
+manual.
+* DONE
+Status: 1 ERROR
+
+
+
 
 
 ```
@@ -424,11 +574,11 @@ ERROR: compilation failed for package ‘glmmfields’
 
 <details>
 
-* Version: 1.0.0
+* Version: 1.0.1
 * GitHub: NA
 * Source code: https://github.com/cran/loon.shiny
-* Date/Publication: 2021-06-10 16:30:06 UTC
-* Number of recursive dependencies: 130
+* Date/Publication: 2021-09-27 19:40:02 UTC
+* Number of recursive dependencies: 131
 
 Run `cloud_details(, "loon.shiny")` for more info
 
@@ -446,7 +596,7 @@ Run `cloud_details(, "loon.shiny")` for more info
 * using options ‘--no-manual --no-build-vignettes’
 * checking for file ‘loon.shiny/DESCRIPTION’ ... OK
 * checking extension type ... Package
-* this is package ‘loon.shiny’ version ‘1.0.0’
+* this is package ‘loon.shiny’ version ‘1.0.1’
 * package encoding: UTF-8
 * checking package namespace information ... OK
 * checking package dependencies ... ERROR
@@ -472,7 +622,7 @@ Status: 1 ERROR
 * using options ‘--no-manual --no-build-vignettes’
 * checking for file ‘loon.shiny/DESCRIPTION’ ... OK
 * checking extension type ... Package
-* this is package ‘loon.shiny’ version ‘1.0.0’
+* this is package ‘loon.shiny’ version ‘1.0.1’
 * package encoding: UTF-8
 * checking package namespace information ... OK
 * checking package dependencies ... ERROR
@@ -554,17 +704,17 @@ Status: 1 ERROR
 
 
 ```
-# metagam
+# metacoder
 
 <details>
 
-* Version: 0.2.0
-* GitHub: https://github.com/Lifebrain/metagam
-* Source code: https://github.com/cran/metagam
-* Date/Publication: 2020-11-12 08:10:02 UTC
-* Number of recursive dependencies: 145
+* Version: 0.3.5
+* GitHub: https://github.com/grunwaldlab/metacoder
+* Source code: https://github.com/cran/metacoder
+* Date/Publication: 2021-06-23 22:00:02 UTC
+* Number of recursive dependencies: 167
 
-Run `cloud_details(, "metagam")` for more info
+Run `cloud_details(, "metacoder")` for more info
 
 </details>
 
@@ -573,20 +723,19 @@ Run `cloud_details(, "metagam")` for more info
 ### Devel
 
 ```
-* using log directory ‘/tmp/workdir/metagam/new/metagam.Rcheck’
+* using log directory ‘/tmp/workdir/metacoder/new/metacoder.Rcheck’
 * using R version 4.0.3 (2020-10-10)
 * using platform: x86_64-pc-linux-gnu (64-bit)
 * using session charset: UTF-8
 * using options ‘--no-manual --no-build-vignettes’
-* checking for file ‘metagam/DESCRIPTION’ ... OK
-* checking extension type ... Package
-* this is package ‘metagam’ version ‘0.2.0’
+* checking for file ‘metacoder/DESCRIPTION’ ... OK
+* this is package ‘metacoder’ version ‘0.3.5’
 * package encoding: UTF-8
 * checking package namespace information ... OK
 * checking package dependencies ... ERROR
-Package required but not available: ‘metap’
+Package required but not available: ‘taxize’
 
-Package suggested but not available for checking: ‘multtest’
+Package suggested but not available for checking: ‘traits’
 
 See section ‘The DESCRIPTION file’ in the ‘Writing R Extensions’
 manual.
@@ -601,20 +750,19 @@ Status: 1 ERROR
 ### CRAN
 
 ```
-* using log directory ‘/tmp/workdir/metagam/old/metagam.Rcheck’
+* using log directory ‘/tmp/workdir/metacoder/old/metacoder.Rcheck’
 * using R version 4.0.3 (2020-10-10)
 * using platform: x86_64-pc-linux-gnu (64-bit)
 * using session charset: UTF-8
 * using options ‘--no-manual --no-build-vignettes’
-* checking for file ‘metagam/DESCRIPTION’ ... OK
-* checking extension type ... Package
-* this is package ‘metagam’ version ‘0.2.0’
+* checking for file ‘metacoder/DESCRIPTION’ ... OK
+* this is package ‘metacoder’ version ‘0.3.5’
 * package encoding: UTF-8
 * checking package namespace information ... OK
 * checking package dependencies ... ERROR
-Package required but not available: ‘metap’
+Package required but not available: ‘taxize’
 
-Package suggested but not available for checking: ‘multtest’
+Package suggested but not available for checking: ‘traits’
 
 See section ‘The DESCRIPTION file’ in the ‘Writing R Extensions’
 manual.
@@ -626,77 +774,17 @@ Status: 1 ERROR
 
 
 ```
-# mlbstatsR
+# myTAI
 
 <details>
 
-* Version: 0.1.0
-* GitHub: NA
-* Source code: https://github.com/cran/mlbstatsR
-* Date/Publication: 2021-05-17 07:30:14 UTC
-* Number of recursive dependencies: 105
+* Version: 0.9.3
+* GitHub: https://github.com/drostlab/myTAI
+* Source code: https://github.com/cran/myTAI
+* Date/Publication: 2021-02-24 05:40:02 UTC
+* Number of recursive dependencies: 161
 
-Run `cloud_details(, "mlbstatsR")` for more info
-
-</details>
-
-## In both
-
-*   checking whether package ‘mlbstatsR’ can be installed ... ERROR
-    ```
-    Installation failed.
-    See ‘/tmp/workdir/mlbstatsR/new/mlbstatsR.Rcheck/00install.out’ for details.
-    ```
-
-## Installation
-
-### Devel
-
-```
-* installing *source* package ‘mlbstatsR’ ...
-** package ‘mlbstatsR’ successfully unpacked and MD5 sums checked
-** using staged installation
-** R
-** inst
-** byte-compile and prepare package for lazy loading
-4 MLB ESPN logos in png!
-Error in open.connection(con, "rb") : HTTP error 403.
-Error: unable to load R code in package ‘mlbstatsR’
-Execution halted
-ERROR: lazy loading failed for package ‘mlbstatsR’
-* removing ‘/tmp/workdir/mlbstatsR/new/mlbstatsR.Rcheck/mlbstatsR’
-
-
-```
-### CRAN
-
-```
-* installing *source* package ‘mlbstatsR’ ...
-** package ‘mlbstatsR’ successfully unpacked and MD5 sums checked
-** using staged installation
-** R
-** inst
-** byte-compile and prepare package for lazy loading
-4 MLB ESPN logos in png!
-Error in open.connection(con, "rb") : HTTP error 403.
-Error: unable to load R code in package ‘mlbstatsR’
-Execution halted
-ERROR: lazy loading failed for package ‘mlbstatsR’
-* removing ‘/tmp/workdir/mlbstatsR/old/mlbstatsR.Rcheck/mlbstatsR’
-
-
-```
-# pencal
-
-<details>
-
-* Version: 0.4.2
-* GitHub: NA
-* Source code: https://github.com/cran/pencal
-* Date/Publication: 2021-05-28 09:30:02 UTC
-* Number of recursive dependencies: 149
-
-Run `cloud_details(, "pencal")` for more info
+Run `cloud_details(, "myTAI")` for more info
 
 </details>
 
@@ -705,19 +793,17 @@ Run `cloud_details(, "pencal")` for more info
 ### Devel
 
 ```
-* using log directory ‘/tmp/workdir/pencal/new/pencal.Rcheck’
+* using log directory ‘/tmp/workdir/myTAI/new/myTAI.Rcheck’
 * using R version 4.0.3 (2020-10-10)
 * using platform: x86_64-pc-linux-gnu (64-bit)
 * using session charset: UTF-8
 * using options ‘--no-manual --no-build-vignettes’
-* checking for file ‘pencal/DESCRIPTION’ ... OK
-* this is package ‘pencal’ version ‘0.4.2’
-* package encoding: UTF-8
+* checking for file ‘myTAI/DESCRIPTION’ ... OK
+* checking extension type ... Package
+* this is package ‘myTAI’ version ‘0.9.3’
 * checking package namespace information ... OK
 * checking package dependencies ... ERROR
-Package required but not available: ‘survcomp’
-
-Package suggested but not available for checking: ‘ptmixed’
+Package required but not available: ‘taxize’
 
 See section ‘The DESCRIPTION file’ in the ‘Writing R Extensions’
 manual.
@@ -732,19 +818,17 @@ Status: 1 ERROR
 ### CRAN
 
 ```
-* using log directory ‘/tmp/workdir/pencal/old/pencal.Rcheck’
+* using log directory ‘/tmp/workdir/myTAI/old/myTAI.Rcheck’
 * using R version 4.0.3 (2020-10-10)
 * using platform: x86_64-pc-linux-gnu (64-bit)
 * using session charset: UTF-8
 * using options ‘--no-manual --no-build-vignettes’
-* checking for file ‘pencal/DESCRIPTION’ ... OK
-* this is package ‘pencal’ version ‘0.4.2’
-* package encoding: UTF-8
+* checking for file ‘myTAI/DESCRIPTION’ ... OK
+* checking extension type ... Package
+* this is package ‘myTAI’ version ‘0.9.3’
 * checking package namespace information ... OK
 * checking package dependencies ... ERROR
-Package required but not available: ‘survcomp’
-
-Package suggested but not available for checking: ‘ptmixed’
+Package required but not available: ‘taxize’
 
 See section ‘The DESCRIPTION file’ in the ‘Writing R Extensions’
 manual.
@@ -756,17 +840,17 @@ Status: 1 ERROR
 
 
 ```
-# rabhit
+# nodeSub
 
 <details>
 
-* Version: 0.1.5
-* GitHub: NA
-* Source code: https://github.com/cran/rabhit
-* Date/Publication: 2020-07-11 22:40:02 UTC
-* Number of recursive dependencies: 123
+* Version: 1.2
+* GitHub: https://github.com/thijsjanzen/nodeSub
+* Source code: https://github.com/cran/nodeSub
+* Date/Publication: 2021-09-30 08:30:02 UTC
+* Number of recursive dependencies: 236
 
-Run `cloud_details(, "rabhit")` for more info
+Run `cloud_details(, "nodeSub")` for more info
 
 </details>
 
@@ -775,18 +859,22 @@ Run `cloud_details(, "rabhit")` for more info
 ### Devel
 
 ```
-* using log directory ‘/tmp/workdir/rabhit/new/rabhit.Rcheck’
+* using log directory ‘/tmp/workdir/nodeSub/new/nodeSub.Rcheck’
 * using R version 4.0.3 (2020-10-10)
 * using platform: x86_64-pc-linux-gnu (64-bit)
 * using session charset: UTF-8
 * using options ‘--no-manual --no-build-vignettes’
-* checking for file ‘rabhit/DESCRIPTION’ ... OK
+* checking for file ‘nodeSub/DESCRIPTION’ ... OK
 * checking extension type ... Package
-* this is package ‘rabhit’ version ‘0.1.5’
+* this is package ‘nodeSub’ version ‘1.2’
 * package encoding: UTF-8
 * checking package namespace information ... OK
-* checking package dependencies ... ERROR
-Packages required but not available: 'alakazam', 'tigger'
+...
+Packages required but not available:
+  'RPANDA', 'phangorn', 'DDD', 'geiger', 'babette', 'beastier',
+  'mauricer'
+
+Packages suggested but not available for checking: 'phytools', 'TreeSim'
 
 See section ‘The DESCRIPTION file’ in the ‘Writing R Extensions’
 manual.
@@ -801,18 +889,314 @@ Status: 1 ERROR
 ### CRAN
 
 ```
-* using log directory ‘/tmp/workdir/rabhit/old/rabhit.Rcheck’
+* using log directory ‘/tmp/workdir/nodeSub/old/nodeSub.Rcheck’
 * using R version 4.0.3 (2020-10-10)
 * using platform: x86_64-pc-linux-gnu (64-bit)
 * using session charset: UTF-8
 * using options ‘--no-manual --no-build-vignettes’
-* checking for file ‘rabhit/DESCRIPTION’ ... OK
+* checking for file ‘nodeSub/DESCRIPTION’ ... OK
 * checking extension type ... Package
-* this is package ‘rabhit’ version ‘0.1.5’
+* this is package ‘nodeSub’ version ‘1.2’
 * package encoding: UTF-8
 * checking package namespace information ... OK
+...
+Packages required but not available:
+  'RPANDA', 'phangorn', 'DDD', 'geiger', 'babette', 'beastier',
+  'mauricer'
+
+Packages suggested but not available for checking: 'phytools', 'TreeSim'
+
+See section ‘The DESCRIPTION file’ in the ‘Writing R Extensions’
+manual.
+* DONE
+Status: 1 ERROR
+
+
+
+
+
+```
+# phyr
+
+<details>
+
+* Version: 1.1.0
+* GitHub: https://github.com/daijiang/phyr
+* Source code: https://github.com/cran/phyr
+* Date/Publication: 2020-12-18 07:30:05 UTC
+* Number of recursive dependencies: 185
+
+Run `cloud_details(, "phyr")` for more info
+
+</details>
+
+## Error before installation
+
+### Devel
+
+```
+* using log directory ‘/tmp/workdir/phyr/new/phyr.Rcheck’
+* using R version 4.0.3 (2020-10-10)
+* using platform: x86_64-pc-linux-gnu (64-bit)
+* using session charset: UTF-8
+* using options ‘--no-manual --no-build-vignettes’
+* checking for file ‘phyr/DESCRIPTION’ ... OK
+* checking extension type ... Package
+* this is package ‘phyr’ version ‘1.1.0’
+* package encoding: UTF-8
+* checking package namespace information ... OK
+...
+  Running ‘testthat.R’
+* checking for unstated dependencies in vignettes ... OK
+* checking package vignettes in ‘inst/doc’ ... OK
+* checking running R code from vignettes ... NONE
+  ‘benchmarks.Rmd’ using ‘UTF-8’... OK
+  ‘pglmm.Rmd’ using ‘UTF-8’... OK
+  ‘plot-re.Rmd’ using ‘UTF-8’... OK
+* checking re-building of vignette outputs ... SKIPPED
+* DONE
+Status: 2 NOTEs
+
+
+
+
+
+```
+### CRAN
+
+```
+* using log directory ‘/tmp/workdir/phyr/old/phyr.Rcheck’
+* using R version 4.0.3 (2020-10-10)
+* using platform: x86_64-pc-linux-gnu (64-bit)
+* using session charset: UTF-8
+* using options ‘--no-manual --no-build-vignettes’
+* checking for file ‘phyr/DESCRIPTION’ ... OK
+* checking extension type ... Package
+* this is package ‘phyr’ version ‘1.1.0’
+* package encoding: UTF-8
+* checking package namespace information ... OK
+...
+  Running ‘testthat.R’
+* checking for unstated dependencies in vignettes ... OK
+* checking package vignettes in ‘inst/doc’ ... OK
+* checking running R code from vignettes ... NONE
+  ‘benchmarks.Rmd’ using ‘UTF-8’... OK
+  ‘pglmm.Rmd’ using ‘UTF-8’... OK
+  ‘plot-re.Rmd’ using ‘UTF-8’... OK
+* checking re-building of vignette outputs ... SKIPPED
+* DONE
+Status: 2 NOTEs
+
+
+
+
+
+```
+# Platypus
+
+<details>
+
+* Version: 3.2.3
+* GitHub: NA
+* Source code: https://github.com/cran/Platypus
+* Date/Publication: 2021-10-19 07:00:02 UTC
+* Number of recursive dependencies: 241
+
+Run `cloud_details(, "Platypus")` for more info
+
+</details>
+
+## Error before installation
+
+### Devel
+
+```
+* using log directory ‘/tmp/workdir/Platypus/new/Platypus.Rcheck’
+* using R version 4.0.3 (2020-10-10)
+* using platform: x86_64-pc-linux-gnu (64-bit)
+* using session charset: UTF-8
+* using options ‘--no-manual --no-build-vignettes’
+* checking for file ‘Platypus/DESCRIPTION’ ... OK
+* checking extension type ... Package
+* this is package ‘Platypus’ version ‘3.2.3’
+* package encoding: UTF-8
+* checking package namespace information ... OK
+...
+* checking installed files from ‘inst/doc’ ... OK
+* checking files in ‘vignettes’ ... OK
+* checking examples ... OK
+* checking for unstated dependencies in vignettes ... OK
+* checking package vignettes in ‘inst/doc’ ... OK
+* checking running R code from vignettes ... NONE
+  ‘PlatypusV3_agedCNS.Rmd’ using ‘UTF-8’... OK
+* checking re-building of vignette outputs ... SKIPPED
+* DONE
+Status: 2 NOTEs
+
+
+
+
+
+```
+### CRAN
+
+```
+* using log directory ‘/tmp/workdir/Platypus/old/Platypus.Rcheck’
+* using R version 4.0.3 (2020-10-10)
+* using platform: x86_64-pc-linux-gnu (64-bit)
+* using session charset: UTF-8
+* using options ‘--no-manual --no-build-vignettes’
+* checking for file ‘Platypus/DESCRIPTION’ ... OK
+* checking extension type ... Package
+* this is package ‘Platypus’ version ‘3.2.3’
+* package encoding: UTF-8
+* checking package namespace information ... OK
+...
+* checking installed files from ‘inst/doc’ ... OK
+* checking files in ‘vignettes’ ... OK
+* checking examples ... OK
+* checking for unstated dependencies in vignettes ... OK
+* checking package vignettes in ‘inst/doc’ ... OK
+* checking running R code from vignettes ... NONE
+  ‘PlatypusV3_agedCNS.Rmd’ using ‘UTF-8’... OK
+* checking re-building of vignette outputs ... SKIPPED
+* DONE
+Status: 2 NOTEs
+
+
+
+
+
+```
+# pmc
+
+<details>
+
+* Version: 1.0.4
+* GitHub: https://github.com/cboettig/pmc
+* Source code: https://github.com/cran/pmc
+* Date/Publication: 2021-01-07 18:10:12 UTC
+* Number of recursive dependencies: 94
+
+Run `cloud_details(, "pmc")` for more info
+
+</details>
+
+## Error before installation
+
+### Devel
+
+```
+* using log directory ‘/tmp/workdir/pmc/new/pmc.Rcheck’
+* using R version 4.0.3 (2020-10-10)
+* using platform: x86_64-pc-linux-gnu (64-bit)
+* using session charset: UTF-8
+* using options ‘--no-manual --no-build-vignettes’
+* checking for file ‘pmc/DESCRIPTION’ ... OK
+* this is package ‘pmc’ version ‘1.0.4’
+* checking package namespace information ... OK
 * checking package dependencies ... ERROR
-Packages required but not available: 'alakazam', 'tigger'
+Package required but not available: ‘geiger’
+
+See section ‘The DESCRIPTION file’ in the ‘Writing R Extensions’
+manual.
+* DONE
+Status: 1 ERROR
+
+
+
+
+
+```
+### CRAN
+
+```
+* using log directory ‘/tmp/workdir/pmc/old/pmc.Rcheck’
+* using R version 4.0.3 (2020-10-10)
+* using platform: x86_64-pc-linux-gnu (64-bit)
+* using session charset: UTF-8
+* using options ‘--no-manual --no-build-vignettes’
+* checking for file ‘pmc/DESCRIPTION’ ... OK
+* this is package ‘pmc’ version ‘1.0.4’
+* checking package namespace information ... OK
+* checking package dependencies ... ERROR
+Package required but not available: ‘geiger’
+
+See section ‘The DESCRIPTION file’ in the ‘Writing R Extensions’
+manual.
+* DONE
+Status: 1 ERROR
+
+
+
+
+
+```
+# Rarefy
+
+<details>
+
+* Version: 1.1
+* GitHub: NA
+* Source code: https://github.com/cran/Rarefy
+* Date/Publication: 2021-03-11 23:10:09 UTC
+* Number of recursive dependencies: 203
+
+Run `cloud_details(, "Rarefy")` for more info
+
+</details>
+
+## Error before installation
+
+### Devel
+
+```
+* using log directory ‘/tmp/workdir/Rarefy/new/Rarefy.Rcheck’
+* using R version 4.0.3 (2020-10-10)
+* using platform: x86_64-pc-linux-gnu (64-bit)
+* using session charset: UTF-8
+* using options ‘--no-manual --no-build-vignettes’
+* checking for file ‘Rarefy/DESCRIPTION’ ... OK
+* checking extension type ... Package
+* this is package ‘Rarefy’ version ‘1.1’
+* package encoding: UTF-8
+* checking package namespace information ... OK
+...
+* checking package dependencies ... ERROR
+Packages required but not available: 'adiv', 'geiger'
+
+Packages suggested but not available for checking:
+  'phyloregion', 'phytools'
+
+See section ‘The DESCRIPTION file’ in the ‘Writing R Extensions’
+manual.
+* DONE
+Status: 1 ERROR
+
+
+
+
+
+```
+### CRAN
+
+```
+* using log directory ‘/tmp/workdir/Rarefy/old/Rarefy.Rcheck’
+* using R version 4.0.3 (2020-10-10)
+* using platform: x86_64-pc-linux-gnu (64-bit)
+* using session charset: UTF-8
+* using options ‘--no-manual --no-build-vignettes’
+* checking for file ‘Rarefy/DESCRIPTION’ ... OK
+* checking extension type ... Package
+* this is package ‘Rarefy’ version ‘1.1’
+* package encoding: UTF-8
+* checking package namespace information ... OK
+...
+* checking package dependencies ... ERROR
+Packages required but not available: 'adiv', 'geiger'
+
+Packages suggested but not available for checking:
+  'phyloregion', 'phytools'
 
 See section ‘The DESCRIPTION file’ in the ‘Writing R Extensions’
 manual.
@@ -832,7 +1216,7 @@ Status: 1 ERROR
 * GitHub: NA
 * Source code: https://github.com/cran/raw
 * Date/Publication: 2021-02-05 15:40:03 UTC
-* Number of recursive dependencies: 159
+* Number of recursive dependencies: 183
 
 Run `cloud_details(, "raw")` for more info
 
@@ -900,173 +1284,17 @@ Status: 1 NOTE
 
 
 ```
-# rmdcev
+# rbison
 
 <details>
 
-* Version: 1.2.4
-* GitHub: https://github.com/plloydsmith/rmdcev
-* Source code: https://github.com/cran/rmdcev
-* Date/Publication: 2020-09-30 18:40:02 UTC
-* Number of recursive dependencies: 82
+* Version: 1.0.0
+* GitHub: https://github.com/ropensci/rbison
+* Source code: https://github.com/cran/rbison
+* Date/Publication: 2020-06-08 18:30:03 UTC
+* Number of recursive dependencies: 138
 
-Run `cloud_details(, "rmdcev")` for more info
-
-</details>
-
-## In both
-
-*   checking whether package ‘rmdcev’ can be installed ... ERROR
-    ```
-    Installation failed.
-    See ‘/tmp/workdir/rmdcev/new/rmdcev.Rcheck/00install.out’ for details.
-    ```
-
-## Installation
-
-### Devel
-
-```
-* installing *source* package ‘rmdcev’ ...
-** package ‘rmdcev’ successfully unpacked and MD5 sums checked
-** using staged installation
-** libs
-
-
-g++ -std=gnu++14 -I"/opt/R/4.0.3/lib/R/include" -DNDEBUG -I"../inst/include" -I"/opt/R/4.0.3/lib/R/site-library/StanHeaders/include/src" -DBOOST_DISABLE_ASSERTS -DEIGEN_NO_DEBUG -DBOOST_MATH_OVERFLOW_ERROR_POLICY=errno_on_error -I'/opt/R/4.0.3/lib/R/site-library/BH/include' -I'/opt/R/4.0.3/lib/R/site-library/Rcpp/include' -I'/opt/R/4.0.3/lib/R/site-library/RcppEigen/include' -I'/opt/R/4.0.3/lib/R/site-library/RcppParallel/include' -I'/opt/R/4.0.3/lib/R/site-library/rstan/include' -I'/opt/R/4.0.3/lib/R/site-library/StanHeaders/include' -I/usr/local/include   -I'/opt/R/4.0.3/lib/R/site-library/RcppParallel/include' -D_REENTRANT -DSTAN_THREADS   -fpic  -g -O2  -c RcppExports.cpp -o RcppExports.o
-In file included from /opt/R/4.0.3/lib/R/site-library/RcppEigen/include/Eigen/Core:397,
-                 from /opt/R/4.0.3/lib/R/site-library/RcppEigen/include/Eigen/Dense:1,
-                 from /opt/R/4.0.3/lib/R/site-library/StanHeaders/include/stan/math/prim/mat/fun/Eigen.hpp:13,
-...
-/opt/R/4.0.3/lib/R/site-library/RcppEigen/include/Eigen/src/Core/ProductEvaluators.h:35:90:   required from ‘Eigen::internal::evaluator<Eigen::Product<Lhs, Rhs, Option> >::evaluator(const XprType&) [with Lhs = Eigen::Product<Eigen::CwiseBinaryOp<Eigen::internal::scalar_product_op<double, double>, const Eigen::CwiseNullaryOp<Eigen::internal::scalar_constant_op<double>, const Eigen::Matrix<double, 1, -1> >, const Eigen::Transpose<Eigen::Matrix<double, -1, 1> > >, Eigen::Matrix<double, -1, -1>, 0>; Rhs = Eigen::Matrix<double, -1, 1>; int Options = 0; Eigen::internal::evaluator<Eigen::Product<Lhs, Rhs, Option> >::XprType = Eigen::Product<Eigen::Product<Eigen::CwiseBinaryOp<Eigen::internal::scalar_product_op<double, double>, const Eigen::CwiseNullaryOp<Eigen::internal::scalar_constant_op<double>, const Eigen::Matrix<double, 1, -1> >, const Eigen::Transpose<Eigen::Matrix<double, -1, 1> > >, Eigen::Matrix<double, -1, -1>, 0>, Eigen::Matrix<double, -1, 1>, 0>]’
-/opt/R/4.0.3/lib/R/site-library/RcppEigen/include/Eigen/src/Core/Product.h:132:22:   required from ‘Eigen::internal::dense_product_base<Lhs, Rhs, Option, 6>::operator const Scalar() const [with Lhs = Eigen::Product<Eigen::CwiseBinaryOp<Eigen::internal::scalar_product_op<double, double>, const Eigen::CwiseNullaryOp<Eigen::internal::scalar_constant_op<double>, const Eigen::Matrix<double, 1, -1> >, const Eigen::Transpose<Eigen::Matrix<double, -1, 1> > >, Eigen::Matrix<double, -1, -1>, 0>; Rhs = Eigen::Matrix<double, -1, 1>; int Option = 0; Eigen::internal::dense_product_base<Lhs, Rhs, Option, 6>::Scalar = double]’
-/opt/R/4.0.3/lib/R/site-library/StanHeaders/include/src/stan/mcmc/hmc/hamiltonians/dense_e_metric.hpp:23:56:   required from ‘double stan::mcmc::dense_e_metric<Model, BaseRNG>::T(stan::mcmc::dense_e_point&) [with Model = model_mdcev_namespace::model_mdcev; BaseRNG = boost::random::additive_combine_engine<boost::random::linear_congruential_engine<unsigned int, 40014, 0, 2147483563>, boost::random::linear_congruential_engine<unsigned int, 40692, 0, 2147483399> >]’
-/opt/R/4.0.3/lib/R/site-library/StanHeaders/include/src/stan/mcmc/hmc/hamiltonians/dense_e_metric.hpp:22:10:   required from here
-/opt/R/4.0.3/lib/R/site-library/RcppEigen/include/Eigen/src/Core/DenseCoeffsBase.h:55:30: warning: ignoring attributes on template argument ‘Eigen::internal::packet_traits<double>::type’ {aka ‘__vector(2) double’} [-Wignored-attributes]
-g++: fatal error: Killed signal terminated program cc1plus
-compilation terminated.
-make: *** [/opt/R/4.0.3/lib/R/etc/Makeconf:179: stanExports_mdcev.o] Error 1
-ERROR: compilation failed for package ‘rmdcev’
-* removing ‘/tmp/workdir/rmdcev/new/rmdcev.Rcheck/rmdcev’
-
-
-```
-### CRAN
-
-```
-* installing *source* package ‘rmdcev’ ...
-** package ‘rmdcev’ successfully unpacked and MD5 sums checked
-** using staged installation
-** libs
-
-
-g++ -std=gnu++14 -I"/opt/R/4.0.3/lib/R/include" -DNDEBUG -I"../inst/include" -I"/opt/R/4.0.3/lib/R/site-library/StanHeaders/include/src" -DBOOST_DISABLE_ASSERTS -DEIGEN_NO_DEBUG -DBOOST_MATH_OVERFLOW_ERROR_POLICY=errno_on_error -I'/opt/R/4.0.3/lib/R/site-library/BH/include' -I'/opt/R/4.0.3/lib/R/site-library/Rcpp/include' -I'/opt/R/4.0.3/lib/R/site-library/RcppEigen/include' -I'/opt/R/4.0.3/lib/R/site-library/RcppParallel/include' -I'/opt/R/4.0.3/lib/R/site-library/rstan/include' -I'/opt/R/4.0.3/lib/R/site-library/StanHeaders/include' -I/usr/local/include   -I'/opt/R/4.0.3/lib/R/site-library/RcppParallel/include' -D_REENTRANT -DSTAN_THREADS   -fpic  -g -O2  -c RcppExports.cpp -o RcppExports.o
-In file included from /opt/R/4.0.3/lib/R/site-library/RcppEigen/include/Eigen/Core:397,
-                 from /opt/R/4.0.3/lib/R/site-library/RcppEigen/include/Eigen/Dense:1,
-                 from /opt/R/4.0.3/lib/R/site-library/StanHeaders/include/stan/math/prim/mat/fun/Eigen.hpp:13,
-...
-/opt/R/4.0.3/lib/R/site-library/RcppEigen/include/Eigen/src/Core/ProductEvaluators.h:35:90:   required from ‘Eigen::internal::evaluator<Eigen::Product<Lhs, Rhs, Option> >::evaluator(const XprType&) [with Lhs = Eigen::Product<Eigen::CwiseBinaryOp<Eigen::internal::scalar_product_op<double, double>, const Eigen::CwiseNullaryOp<Eigen::internal::scalar_constant_op<double>, const Eigen::Matrix<double, 1, -1> >, const Eigen::Transpose<Eigen::Matrix<double, -1, 1> > >, Eigen::Matrix<double, -1, -1>, 0>; Rhs = Eigen::Matrix<double, -1, 1>; int Options = 0; Eigen::internal::evaluator<Eigen::Product<Lhs, Rhs, Option> >::XprType = Eigen::Product<Eigen::Product<Eigen::CwiseBinaryOp<Eigen::internal::scalar_product_op<double, double>, const Eigen::CwiseNullaryOp<Eigen::internal::scalar_constant_op<double>, const Eigen::Matrix<double, 1, -1> >, const Eigen::Transpose<Eigen::Matrix<double, -1, 1> > >, Eigen::Matrix<double, -1, -1>, 0>, Eigen::Matrix<double, -1, 1>, 0>]’
-/opt/R/4.0.3/lib/R/site-library/RcppEigen/include/Eigen/src/Core/Product.h:132:22:   required from ‘Eigen::internal::dense_product_base<Lhs, Rhs, Option, 6>::operator const Scalar() const [with Lhs = Eigen::Product<Eigen::CwiseBinaryOp<Eigen::internal::scalar_product_op<double, double>, const Eigen::CwiseNullaryOp<Eigen::internal::scalar_constant_op<double>, const Eigen::Matrix<double, 1, -1> >, const Eigen::Transpose<Eigen::Matrix<double, -1, 1> > >, Eigen::Matrix<double, -1, -1>, 0>; Rhs = Eigen::Matrix<double, -1, 1>; int Option = 0; Eigen::internal::dense_product_base<Lhs, Rhs, Option, 6>::Scalar = double]’
-/opt/R/4.0.3/lib/R/site-library/StanHeaders/include/src/stan/mcmc/hmc/hamiltonians/dense_e_metric.hpp:23:56:   required from ‘double stan::mcmc::dense_e_metric<Model, BaseRNG>::T(stan::mcmc::dense_e_point&) [with Model = model_mdcev_namespace::model_mdcev; BaseRNG = boost::random::additive_combine_engine<boost::random::linear_congruential_engine<unsigned int, 40014, 0, 2147483563>, boost::random::linear_congruential_engine<unsigned int, 40692, 0, 2147483399> >]’
-/opt/R/4.0.3/lib/R/site-library/StanHeaders/include/src/stan/mcmc/hmc/hamiltonians/dense_e_metric.hpp:22:10:   required from here
-/opt/R/4.0.3/lib/R/site-library/RcppEigen/include/Eigen/src/Core/DenseCoeffsBase.h:55:30: warning: ignoring attributes on template argument ‘Eigen::internal::packet_traits<double>::type’ {aka ‘__vector(2) double’} [-Wignored-attributes]
-g++: fatal error: Killed signal terminated program cc1plus
-compilation terminated.
-make: *** [/opt/R/4.0.3/lib/R/etc/Makeconf:179: stanExports_mdcev.o] Error 1
-ERROR: compilation failed for package ‘rmdcev’
-* removing ‘/tmp/workdir/rmdcev/old/rmdcev.Rcheck/rmdcev’
-
-
-```
-# rstap
-
-<details>
-
-* Version: 1.0.3
-* GitHub: https://github.com/biostatistics4socialimpact/rstap
-* Source code: https://github.com/cran/rstap
-* Date/Publication: 2019-02-06 20:30:03 UTC
-* Number of recursive dependencies: 110
-
-Run `cloud_details(, "rstap")` for more info
-
-</details>
-
-## In both
-
-*   checking whether package ‘rstap’ can be installed ... ERROR
-    ```
-    Installation failed.
-    See ‘/tmp/workdir/rstap/new/rstap.Rcheck/00install.out’ for details.
-    ```
-
-## Installation
-
-### Devel
-
-```
-* installing *source* package ‘rstap’ ...
-** package ‘rstap’ successfully unpacked and MD5 sums checked
-** using staged installation
-** libs
-"/opt/R/4.0.3/lib/R/bin/Rscript" -e "source(file.path('..', 'tools', 'make_cc.R')); make_cc(commandArgs(TRUE))" stan_files/stap_binomial.stan
-Wrote C++ file "stan_files/stap_binomial.cc"
-g++ -std=gnu++14 -I"/opt/R/4.0.3/lib/R/include" -DNDEBUG -I"../inst/include" -I"`"/opt/R/4.0.3/lib/R/bin/Rscript" --vanilla -e "cat(system.file('include', 'src', package = 'StanHeaders'))"`" -DBOOST_RESULT_OF_USE_TR1 -DBOOST_NO_DECLTYPE -DBOOST_DISABLE_ASSERTS -DEIGEN_NO_DEBUG -DBOOST_MATH_OVERFLOW_ERROR_POLICY=errno_on_error  -I'/opt/R/4.0.3/lib/R/site-library/StanHeaders/include' -I'/opt/R/4.0.3/lib/R/site-library/rstan/include' -I'/opt/R/4.0.3/lib/R/site-library/BH/include' -I'/opt/R/4.0.3/lib/R/site-library/Rcpp/include' -I'/opt/R/4.0.3/lib/R/site-library/RcppEigen/include' -I/usr/local/include   -fpic  -g -O2  -c stan_files/stap_binomial.cc -o stan_files/stap_binomial.o
-In file included from /opt/R/4.0.3/lib/R/site-library/RcppEigen/include/Eigen/Core:397,
-                 from /opt/R/4.0.3/lib/R/site-library/RcppEigen/include/Eigen/Dense:1,
-                 from /opt/R/4.0.3/lib/R/site-library/StanHeaders/include/stan/math/prim/mat/fun/Eigen.hpp:13,
-...
-/opt/R/4.0.3/lib/R/site-library/RcppEigen/include/Eigen/src/Core/Product.h:132:22:   required from ‘Eigen::internal::dense_product_base<Lhs, Rhs, Option, 6>::operator const Scalar() const [with Lhs = Eigen::Product<Eigen::CwiseBinaryOp<Eigen::internal::scalar_product_op<double, double>, const Eigen::CwiseNullaryOp<Eigen::internal::scalar_constant_op<double>, const Eigen::Matrix<double, 1, -1> >, const Eigen::Transpose<Eigen::Matrix<double, -1, 1> > >, Eigen::Matrix<double, -1, -1>, 0>; Rhs = Eigen::Matrix<double, -1, 1>; int Option = 0; Eigen::internal::dense_product_base<Lhs, Rhs, Option, 6>::Scalar = double]’
-/opt/R/4.0.3/lib/R/site-library/StanHeaders/include/src/stan/mcmc/hmc/hamiltonians/dense_e_metric.hpp:23:56:   required from ‘double stan::mcmc::dense_e_metric<Model, BaseRNG>::T(stan::mcmc::dense_e_point&) [with Model = model_stap_binomial_namespace::model_stap_binomial; BaseRNG = boost::random::additive_combine_engine<boost::random::linear_congruential_engine<unsigned int, 40014, 0, 2147483563>, boost::random::linear_congruential_engine<unsigned int, 40692, 0, 2147483399> >]’
-/opt/R/4.0.3/lib/R/site-library/StanHeaders/include/src/stan/mcmc/hmc/hamiltonians/dense_e_metric.hpp:22:10:   required from here
-/opt/R/4.0.3/lib/R/site-library/RcppEigen/include/Eigen/src/Core/DenseCoeffsBase.h:55:30: warning: ignoring attributes on template argument ‘Eigen::internal::packet_traits<double>::type’ {aka ‘__vector(2) double’} [-Wignored-attributes]
-g++: fatal error: Killed signal terminated program cc1plus
-compilation terminated.
-make: *** [/opt/R/4.0.3/lib/R/etc/Makeconf:179: stan_files/stap_binomial.o] Error 1
-rm stan_files/stap_binomial.cc
-ERROR: compilation failed for package ‘rstap’
-* removing ‘/tmp/workdir/rstap/new/rstap.Rcheck/rstap’
-
-
-```
-### CRAN
-
-```
-* installing *source* package ‘rstap’ ...
-** package ‘rstap’ successfully unpacked and MD5 sums checked
-** using staged installation
-** libs
-"/opt/R/4.0.3/lib/R/bin/Rscript" -e "source(file.path('..', 'tools', 'make_cc.R')); make_cc(commandArgs(TRUE))" stan_files/stap_binomial.stan
-Wrote C++ file "stan_files/stap_binomial.cc"
-g++ -std=gnu++14 -I"/opt/R/4.0.3/lib/R/include" -DNDEBUG -I"../inst/include" -I"`"/opt/R/4.0.3/lib/R/bin/Rscript" --vanilla -e "cat(system.file('include', 'src', package = 'StanHeaders'))"`" -DBOOST_RESULT_OF_USE_TR1 -DBOOST_NO_DECLTYPE -DBOOST_DISABLE_ASSERTS -DEIGEN_NO_DEBUG -DBOOST_MATH_OVERFLOW_ERROR_POLICY=errno_on_error  -I'/opt/R/4.0.3/lib/R/site-library/StanHeaders/include' -I'/opt/R/4.0.3/lib/R/site-library/rstan/include' -I'/opt/R/4.0.3/lib/R/site-library/BH/include' -I'/opt/R/4.0.3/lib/R/site-library/Rcpp/include' -I'/opt/R/4.0.3/lib/R/site-library/RcppEigen/include' -I/usr/local/include   -fpic  -g -O2  -c stan_files/stap_binomial.cc -o stan_files/stap_binomial.o
-In file included from /opt/R/4.0.3/lib/R/site-library/RcppEigen/include/Eigen/Core:397,
-                 from /opt/R/4.0.3/lib/R/site-library/RcppEigen/include/Eigen/Dense:1,
-                 from /opt/R/4.0.3/lib/R/site-library/StanHeaders/include/stan/math/prim/mat/fun/Eigen.hpp:13,
-...
-/opt/R/4.0.3/lib/R/site-library/RcppEigen/include/Eigen/src/Core/Product.h:132:22:   required from ‘Eigen::internal::dense_product_base<Lhs, Rhs, Option, 6>::operator const Scalar() const [with Lhs = Eigen::Product<Eigen::CwiseBinaryOp<Eigen::internal::scalar_product_op<double, double>, const Eigen::CwiseNullaryOp<Eigen::internal::scalar_constant_op<double>, const Eigen::Matrix<double, 1, -1> >, const Eigen::Transpose<Eigen::Matrix<double, -1, 1> > >, Eigen::Matrix<double, -1, -1>, 0>; Rhs = Eigen::Matrix<double, -1, 1>; int Option = 0; Eigen::internal::dense_product_base<Lhs, Rhs, Option, 6>::Scalar = double]’
-/opt/R/4.0.3/lib/R/site-library/StanHeaders/include/src/stan/mcmc/hmc/hamiltonians/dense_e_metric.hpp:23:56:   required from ‘double stan::mcmc::dense_e_metric<Model, BaseRNG>::T(stan::mcmc::dense_e_point&) [with Model = model_stap_binomial_namespace::model_stap_binomial; BaseRNG = boost::random::additive_combine_engine<boost::random::linear_congruential_engine<unsigned int, 40014, 0, 2147483563>, boost::random::linear_congruential_engine<unsigned int, 40692, 0, 2147483399> >]’
-/opt/R/4.0.3/lib/R/site-library/StanHeaders/include/src/stan/mcmc/hmc/hamiltonians/dense_e_metric.hpp:22:10:   required from here
-/opt/R/4.0.3/lib/R/site-library/RcppEigen/include/Eigen/src/Core/DenseCoeffsBase.h:55:30: warning: ignoring attributes on template argument ‘Eigen::internal::packet_traits<double>::type’ {aka ‘__vector(2) double’} [-Wignored-attributes]
-g++: fatal error: Killed signal terminated program cc1plus
-compilation terminated.
-make: *** [/opt/R/4.0.3/lib/R/etc/Makeconf:179: stan_files/stap_binomial.o] Error 1
-rm stan_files/stap_binomial.cc
-ERROR: compilation failed for package ‘rstap’
-* removing ‘/tmp/workdir/rstap/old/rstap.Rcheck/rstap’
-
-
-```
-# scoper
-
-<details>
-
-* Version: 1.1.0
-* GitHub: NA
-* Source code: https://github.com/cran/scoper
-* Date/Publication: 2020-08-10 21:50:02 UTC
-* Number of recursive dependencies: 115
-
-Run `cloud_details(, "scoper")` for more info
+Run `cloud_details(, "rbison")` for more info
 
 </details>
 
@@ -1075,18 +1303,94 @@ Run `cloud_details(, "scoper")` for more info
 ### Devel
 
 ```
-* using log directory ‘/tmp/workdir/scoper/new/scoper.Rcheck’
+* using log directory ‘/tmp/workdir/rbison/new/rbison.Rcheck’
 * using R version 4.0.3 (2020-10-10)
 * using platform: x86_64-pc-linux-gnu (64-bit)
 * using session charset: UTF-8
 * using options ‘--no-manual --no-build-vignettes’
-* checking for file ‘scoper/DESCRIPTION’ ... OK
+* checking for file ‘rbison/DESCRIPTION’ ... OK
+* this is package ‘rbison’ version ‘1.0.0’
+* package encoding: UTF-8
+* checking package namespace information ... OK
+* checking package dependencies ... NOTE
+...
+* checking tests ... OK
+  Running ‘test-all.R’
+* checking for unstated dependencies in vignettes ... OK
+* checking package vignettes in ‘inst/doc’ ... OK
+* checking running R code from vignettes ... NONE
+  ‘other_functions.Rmd’ using ‘UTF-8’... OK
+  ‘rbison.Rmd’ using ‘UTF-8’... OK
+* checking re-building of vignette outputs ... SKIPPED
+* DONE
+Status: 1 NOTE
+
+
+
+
+
+```
+### CRAN
+
+```
+* using log directory ‘/tmp/workdir/rbison/old/rbison.Rcheck’
+* using R version 4.0.3 (2020-10-10)
+* using platform: x86_64-pc-linux-gnu (64-bit)
+* using session charset: UTF-8
+* using options ‘--no-manual --no-build-vignettes’
+* checking for file ‘rbison/DESCRIPTION’ ... OK
+* this is package ‘rbison’ version ‘1.0.0’
+* package encoding: UTF-8
+* checking package namespace information ... OK
+* checking package dependencies ... NOTE
+...
+* checking tests ... OK
+  Running ‘test-all.R’
+* checking for unstated dependencies in vignettes ... OK
+* checking package vignettes in ‘inst/doc’ ... OK
+* checking running R code from vignettes ... NONE
+  ‘other_functions.Rmd’ using ‘UTF-8’... OK
+  ‘rbison.Rmd’ using ‘UTF-8’... OK
+* checking re-building of vignette outputs ... SKIPPED
+* DONE
+Status: 1 NOTE
+
+
+
+
+
+```
+# RevGadgets
+
+<details>
+
+* Version: 1.0.0
+* GitHub: https://github.com/cmt2/RevGadgets
+* Source code: https://github.com/cran/RevGadgets
+* Date/Publication: 2021-09-13 11:40:04 UTC
+* Number of recursive dependencies: 112
+
+Run `cloud_details(, "RevGadgets")` for more info
+
+</details>
+
+## Error before installation
+
+### Devel
+
+```
+* using log directory ‘/tmp/workdir/RevGadgets/new/RevGadgets.Rcheck’
+* using R version 4.0.3 (2020-10-10)
+* using platform: x86_64-pc-linux-gnu (64-bit)
+* using session charset: UTF-8
+* using options ‘--no-manual --no-build-vignettes’
+* checking for file ‘RevGadgets/DESCRIPTION’ ... OK
 * checking extension type ... Package
-* this is package ‘scoper’ version ‘1.1.0’
+* this is package ‘RevGadgets’ version ‘1.0.0’
 * package encoding: UTF-8
 * checking package namespace information ... OK
 * checking package dependencies ... ERROR
-Packages required but not available: 'alakazam', 'shazam'
+Packages required but not available: 'phytools', 'ggtree'
 
 See section ‘The DESCRIPTION file’ in the ‘Writing R Extensions’
 manual.
@@ -1101,23 +1405,251 @@ Status: 1 ERROR
 ### CRAN
 
 ```
-* using log directory ‘/tmp/workdir/scoper/old/scoper.Rcheck’
+* using log directory ‘/tmp/workdir/RevGadgets/old/RevGadgets.Rcheck’
 * using R version 4.0.3 (2020-10-10)
 * using platform: x86_64-pc-linux-gnu (64-bit)
 * using session charset: UTF-8
 * using options ‘--no-manual --no-build-vignettes’
-* checking for file ‘scoper/DESCRIPTION’ ... OK
+* checking for file ‘RevGadgets/DESCRIPTION’ ... OK
 * checking extension type ... Package
-* this is package ‘scoper’ version ‘1.1.0’
+* this is package ‘RevGadgets’ version ‘1.0.0’
 * package encoding: UTF-8
 * checking package namespace information ... OK
 * checking package dependencies ... ERROR
-Packages required but not available: 'alakazam', 'shazam'
+Packages required but not available: 'phytools', 'ggtree'
 
 See section ‘The DESCRIPTION file’ in the ‘Writing R Extensions’
 manual.
 * DONE
 Status: 1 ERROR
+
+
+
+
+
+```
+# RNeXML
+
+<details>
+
+* Version: 2.4.5
+* GitHub: https://github.com/ropensci/RNeXML
+* Source code: https://github.com/cran/RNeXML
+* Date/Publication: 2020-06-18 18:40:02 UTC
+* Number of recursive dependencies: 138
+
+Run `cloud_details(, "RNeXML")` for more info
+
+</details>
+
+## Error before installation
+
+### Devel
+
+```
+* using log directory ‘/tmp/workdir/RNeXML/new/RNeXML.Rcheck’
+* using R version 4.0.3 (2020-10-10)
+* using platform: x86_64-pc-linux-gnu (64-bit)
+* using session charset: UTF-8
+* using options ‘--no-manual --no-build-vignettes’
+* checking for file ‘RNeXML/DESCRIPTION’ ... OK
+* checking extension type ... Package
+* this is package ‘RNeXML’ version ‘2.4.5’
+* package encoding: UTF-8
+* checking package namespace information ... OK
+...
+* checking package vignettes in ‘inst/doc’ ... OK
+* checking running R code from vignettes ... NONE
+  ‘S4.Rmd’ using ‘UTF-8’... OK
+  ‘intro.Rmd’ using ‘UTF-8’... OK
+  ‘metadata.Rmd’ using ‘UTF-8’... OK
+  ‘simmap.Rmd’ using ‘UTF-8’... OK
+  ‘sparql.Rmd’ using ‘UTF-8’... OK
+* checking re-building of vignette outputs ... SKIPPED
+* DONE
+Status: 1 ERROR, 1 WARNING, 1 NOTE
+
+
+
+
+
+```
+### CRAN
+
+```
+* using log directory ‘/tmp/workdir/RNeXML/old/RNeXML.Rcheck’
+* using R version 4.0.3 (2020-10-10)
+* using platform: x86_64-pc-linux-gnu (64-bit)
+* using session charset: UTF-8
+* using options ‘--no-manual --no-build-vignettes’
+* checking for file ‘RNeXML/DESCRIPTION’ ... OK
+* checking extension type ... Package
+* this is package ‘RNeXML’ version ‘2.4.5’
+* package encoding: UTF-8
+* checking package namespace information ... OK
+...
+* checking package vignettes in ‘inst/doc’ ... OK
+* checking running R code from vignettes ... NONE
+  ‘S4.Rmd’ using ‘UTF-8’... OK
+  ‘intro.Rmd’ using ‘UTF-8’... OK
+  ‘metadata.Rmd’ using ‘UTF-8’... OK
+  ‘simmap.Rmd’ using ‘UTF-8’... OK
+  ‘sparql.Rmd’ using ‘UTF-8’... OK
+* checking re-building of vignette outputs ... SKIPPED
+* DONE
+Status: 1 ERROR, 1 NOTE
+
+
+
+
+
+```
+# rnoaa
+
+<details>
+
+* Version: 1.3.8
+* GitHub: https://github.com/ropensci/rnoaa
+* Source code: https://github.com/cran/rnoaa
+* Date/Publication: 2021-12-01 06:00:02 UTC
+* Number of recursive dependencies: 154
+
+Run `cloud_details(, "rnoaa")` for more info
+
+</details>
+
+## Error before installation
+
+### Devel
+
+```
+* using log directory ‘/tmp/workdir/rnoaa/new/rnoaa.Rcheck’
+* using R version 4.0.3 (2020-10-10)
+* using platform: x86_64-pc-linux-gnu (64-bit)
+* using session charset: UTF-8
+* using options ‘--no-manual --no-build-vignettes’
+* checking for file ‘rnoaa/DESCRIPTION’ ... OK
+* this is package ‘rnoaa’ version ‘1.3.8’
+* package encoding: UTF-8
+* checking package namespace information ... OK
+* checking package dependencies ... NOTE
+...
+* checking for unstated dependencies in examples ... OK
+* checking contents of ‘data’ directory ... OK
+* checking data for non-ASCII characters ... OK
+* checking data for ASCII and uncompressed saves ... OK
+* checking examples ... OK
+* checking for unstated dependencies in ‘tests’ ... OK
+* checking tests ... OK
+  Running ‘testthat.R’
+* DONE
+Status: 1 NOTE
+
+
+
+
+
+```
+### CRAN
+
+```
+* using log directory ‘/tmp/workdir/rnoaa/old/rnoaa.Rcheck’
+* using R version 4.0.3 (2020-10-10)
+* using platform: x86_64-pc-linux-gnu (64-bit)
+* using session charset: UTF-8
+* using options ‘--no-manual --no-build-vignettes’
+* checking for file ‘rnoaa/DESCRIPTION’ ... OK
+* this is package ‘rnoaa’ version ‘1.3.8’
+* package encoding: UTF-8
+* checking package namespace information ... OK
+* checking package dependencies ... NOTE
+...
+* checking for unstated dependencies in examples ... OK
+* checking contents of ‘data’ directory ... OK
+* checking data for non-ASCII characters ... OK
+* checking data for ASCII and uncompressed saves ... OK
+* checking examples ... OK
+* checking for unstated dependencies in ‘tests’ ... OK
+* checking tests ... OK
+  Running ‘testthat.R’
+* DONE
+Status: 1 NOTE
+
+
+
+
+
+```
+# SPLICE
+
+<details>
+
+* Version: 1.0.0
+* GitHub: https://github.com/agi-lab/SPLICE
+* Source code: https://github.com/cran/SPLICE
+* Date/Publication: 2021-09-13 08:40:06 UTC
+* Number of recursive dependencies: 117
+
+Run `cloud_details(, "SPLICE")` for more info
+
+</details>
+
+## Error before installation
+
+### Devel
+
+```
+* using log directory ‘/tmp/workdir/SPLICE/new/SPLICE.Rcheck’
+* using R version 4.0.3 (2020-10-10)
+* using platform: x86_64-pc-linux-gnu (64-bit)
+* using session charset: UTF-8
+* using options ‘--no-manual --no-build-vignettes’
+* checking for file ‘SPLICE/DESCRIPTION’ ... OK
+* this is package ‘SPLICE’ version ‘1.0.0’
+* package encoding: UTF-8
+* checking package namespace information ... OK
+* checking package dependencies ... NOTE
+...
+* checking installed files from ‘inst/doc’ ... OK
+* checking files in ‘vignettes’ ... OK
+* checking examples ... OK
+* checking for unstated dependencies in vignettes ... OK
+* checking package vignettes in ‘inst/doc’ ... OK
+* checking running R code from vignettes ... NONE
+  ‘SPLICE-demo.Rmd’ using ‘UTF-8’... OK
+* checking re-building of vignette outputs ... SKIPPED
+* DONE
+Status: 1 NOTE
+
+
+
+
+
+```
+### CRAN
+
+```
+* using log directory ‘/tmp/workdir/SPLICE/old/SPLICE.Rcheck’
+* using R version 4.0.3 (2020-10-10)
+* using platform: x86_64-pc-linux-gnu (64-bit)
+* using session charset: UTF-8
+* using options ‘--no-manual --no-build-vignettes’
+* checking for file ‘SPLICE/DESCRIPTION’ ... OK
+* this is package ‘SPLICE’ version ‘1.0.0’
+* package encoding: UTF-8
+* checking package namespace information ... OK
+* checking package dependencies ... NOTE
+...
+* checking installed files from ‘inst/doc’ ... OK
+* checking files in ‘vignettes’ ... OK
+* checking examples ... OK
+* checking for unstated dependencies in vignettes ... OK
+* checking package vignettes in ‘inst/doc’ ... OK
+* checking running R code from vignettes ... NONE
+  ‘SPLICE-demo.Rmd’ using ‘UTF-8’... OK
+* checking re-building of vignette outputs ... SKIPPED
+* DONE
+Status: 1 NOTE
 
 
 
@@ -1128,11 +1660,11 @@ Status: 1 ERROR
 
 <details>
 
-* Version: 1.0.0
+* Version: 1.0.2
 * GitHub: https://github.com/agi-lab/SynthETIC
 * Source code: https://github.com/cran/SynthETIC
-* Date/Publication: 2021-04-02 12:10:02 UTC
-* Number of recursive dependencies: 105
+* Date/Publication: 2021-09-02 23:00:13 UTC
+* Number of recursive dependencies: 116
 
 Run `cloud_details(, "SynthETIC")` for more info
 
@@ -1149,7 +1681,7 @@ Run `cloud_details(, "SynthETIC")` for more info
 * using session charset: UTF-8
 * using options ‘--no-manual --no-build-vignettes’
 * checking for file ‘SynthETIC/DESCRIPTION’ ... OK
-* this is package ‘SynthETIC’ version ‘1.0.0’
+* this is package ‘SynthETIC’ version ‘1.0.2’
 * package encoding: UTF-8
 * checking package namespace information ... OK
 * checking package dependencies ... NOTE
@@ -1179,7 +1711,7 @@ Status: 1 NOTE
 * using session charset: UTF-8
 * using options ‘--no-manual --no-build-vignettes’
 * checking for file ‘SynthETIC/DESCRIPTION’ ... OK
-* this is package ‘SynthETIC’ version ‘1.0.0’
+* this is package ‘SynthETIC’ version ‘1.0.2’
 * package encoding: UTF-8
 * checking package namespace information ... OK
 * checking package dependencies ... NOTE
@@ -1200,17 +1732,17 @@ Status: 1 NOTE
 
 
 ```
-# tigger
+# taxizedb
 
 <details>
 
-* Version: 1.0.0
-* GitHub: NA
-* Source code: https://github.com/cran/tigger
-* Date/Publication: 2020-05-13 05:10:03 UTC
-* Number of recursive dependencies: 116
+* Version: 0.3.0
+* GitHub: https://github.com/ropensci/taxizedb
+* Source code: https://github.com/cran/taxizedb
+* Date/Publication: 2021-01-15 06:00:06 UTC
+* Number of recursive dependencies: 137
 
-Run `cloud_details(, "tigger")` for more info
+Run `cloud_details(, "taxizedb")` for more info
 
 </details>
 
@@ -1219,18 +1751,94 @@ Run `cloud_details(, "tigger")` for more info
 ### Devel
 
 ```
-* using log directory ‘/tmp/workdir/tigger/new/tigger.Rcheck’
+* using log directory ‘/tmp/workdir/taxizedb/new/taxizedb.Rcheck’
 * using R version 4.0.3 (2020-10-10)
 * using platform: x86_64-pc-linux-gnu (64-bit)
 * using session charset: UTF-8
 * using options ‘--no-manual --no-build-vignettes’
-* checking for file ‘tigger/DESCRIPTION’ ... OK
+* checking for file ‘taxizedb/DESCRIPTION’ ... OK
 * checking extension type ... Package
-* this is package ‘tigger’ version ‘1.0.0’
+* this is package ‘taxizedb’ version ‘0.3.0’
+* package encoding: UTF-8
+* checking package namespace information ... OK
+...
+Running the tests in ‘tests/test-all.R’ failed.
+Complete output:
+  > library(testthat)
+  > test_check("taxizedb")
+  Loading required package: taxizedb
+  Error in loadNamespace(name) : there is no package called 'taxize'
+  Calls: test_check ... loadNamespace -> withRestarts -> withOneRestart -> doWithOneRestart
+  Execution halted
+* DONE
+Status: 1 ERROR, 1 NOTE
+
+
+
+
+
+```
+### CRAN
+
+```
+* using log directory ‘/tmp/workdir/taxizedb/old/taxizedb.Rcheck’
+* using R version 4.0.3 (2020-10-10)
+* using platform: x86_64-pc-linux-gnu (64-bit)
+* using session charset: UTF-8
+* using options ‘--no-manual --no-build-vignettes’
+* checking for file ‘taxizedb/DESCRIPTION’ ... OK
+* checking extension type ... Package
+* this is package ‘taxizedb’ version ‘0.3.0’
+* package encoding: UTF-8
+* checking package namespace information ... OK
+...
+Running the tests in ‘tests/test-all.R’ failed.
+Complete output:
+  > library(testthat)
+  > test_check("taxizedb")
+  Loading required package: taxizedb
+  Error in loadNamespace(name) : there is no package called 'taxize'
+  Calls: test_check ... loadNamespace -> withRestarts -> withOneRestart -> doWithOneRestart
+  Execution halted
+* DONE
+Status: 1 ERROR, 1 NOTE
+
+
+
+
+
+```
+# TR8
+
+<details>
+
+* Version: 0.9.22
+* GitHub: https://github.com/GioBo/TR8
+* Source code: https://github.com/cran/TR8
+* Date/Publication: 2020-12-01 19:10:02 UTC
+* Number of recursive dependencies: 135
+
+Run `cloud_details(, "TR8")` for more info
+
+</details>
+
+## Error before installation
+
+### Devel
+
+```
+* using log directory ‘/tmp/workdir/TR8/new/TR8.Rcheck’
+* using R version 4.0.3 (2020-10-10)
+* using platform: x86_64-pc-linux-gnu (64-bit)
+* using session charset: UTF-8
+* using options ‘--no-manual --no-build-vignettes’
+* checking for file ‘TR8/DESCRIPTION’ ... OK
+* checking extension type ... Package
+* this is package ‘TR8’ version ‘0.9.22’
 * package encoding: UTF-8
 * checking package namespace information ... OK
 * checking package dependencies ... ERROR
-Packages required but not available: 'alakazam', 'shazam'
+Package required but not available: ‘taxize’
 
 See section ‘The DESCRIPTION file’ in the ‘Writing R Extensions’
 manual.
@@ -1245,18 +1853,18 @@ Status: 1 ERROR
 ### CRAN
 
 ```
-* using log directory ‘/tmp/workdir/tigger/old/tigger.Rcheck’
+* using log directory ‘/tmp/workdir/TR8/old/TR8.Rcheck’
 * using R version 4.0.3 (2020-10-10)
 * using platform: x86_64-pc-linux-gnu (64-bit)
 * using session charset: UTF-8
 * using options ‘--no-manual --no-build-vignettes’
-* checking for file ‘tigger/DESCRIPTION’ ... OK
+* checking for file ‘TR8/DESCRIPTION’ ... OK
 * checking extension type ... Package
-* this is package ‘tigger’ version ‘1.0.0’
+* this is package ‘TR8’ version ‘0.9.22’
 * package encoding: UTF-8
 * checking package namespace information ... OK
 * checking package dependencies ... ERROR
-Packages required but not available: 'alakazam', 'shazam'
+Package required but not available: ‘taxize’
 
 See section ‘The DESCRIPTION file’ in the ‘Writing R Extensions’
 manual.
@@ -1268,17 +1876,17 @@ Status: 1 ERROR
 
 
 ```
-# trackr
+# traits
 
 <details>
 
-* Version: 0.10.7
-* GitHub: NA
-* Source code: https://github.com/cran/trackr
-* Date/Publication: 2021-05-24 14:50:02 UTC
-* Number of recursive dependencies: 99
+* Version: 0.5.0
+* GitHub: https://github.com/ropensci/traits
+* Source code: https://github.com/cran/traits
+* Date/Publication: 2020-08-27 05:10:06 UTC
+* Number of recursive dependencies: 135
 
-Run `cloud_details(, "trackr")` for more info
+Run `cloud_details(, "traits")` for more info
 
 </details>
 
@@ -1287,18 +1895,17 @@ Run `cloud_details(, "trackr")` for more info
 ### Devel
 
 ```
-* using log directory ‘/tmp/workdir/trackr/new/trackr.Rcheck’
+* using log directory ‘/tmp/workdir/traits/new/traits.Rcheck’
 * using R version 4.0.3 (2020-10-10)
 * using platform: x86_64-pc-linux-gnu (64-bit)
 * using session charset: UTF-8
 * using options ‘--no-manual --no-build-vignettes’
-* checking for file ‘trackr/DESCRIPTION’ ... OK
-* checking extension type ... Package
-* this is package ‘trackr’ version ‘0.10.7’
+* checking for file ‘traits/DESCRIPTION’ ... OK
+* this is package ‘traits’ version ‘0.5.0’
+* package encoding: UTF-8
 * checking package namespace information ... OK
 * checking package dependencies ... ERROR
-Packages required but not available:
-  'histry', 'CodeDepends', 'rsolr', 'roprov'
+Package required but not available: ‘taxize’
 
 See section ‘The DESCRIPTION file’ in the ‘Writing R Extensions’
 manual.
@@ -1313,18 +1920,85 @@ Status: 1 ERROR
 ### CRAN
 
 ```
-* using log directory ‘/tmp/workdir/trackr/old/trackr.Rcheck’
+* using log directory ‘/tmp/workdir/traits/old/traits.Rcheck’
 * using R version 4.0.3 (2020-10-10)
 * using platform: x86_64-pc-linux-gnu (64-bit)
 * using session charset: UTF-8
 * using options ‘--no-manual --no-build-vignettes’
-* checking for file ‘trackr/DESCRIPTION’ ... OK
-* checking extension type ... Package
-* this is package ‘trackr’ version ‘0.10.7’
+* checking for file ‘traits/DESCRIPTION’ ... OK
+* this is package ‘traits’ version ‘0.5.0’
+* package encoding: UTF-8
 * checking package namespace information ... OK
 * checking package dependencies ... ERROR
-Packages required but not available:
-  'histry', 'CodeDepends', 'rsolr', 'roprov'
+Package required but not available: ‘taxize’
+
+See section ‘The DESCRIPTION file’ in the ‘Writing R Extensions’
+manual.
+* DONE
+Status: 1 ERROR
+
+
+
+
+
+```
+# treeplyr
+
+<details>
+
+* Version: 0.1.10
+* GitHub: https://github.com/uyedaj/treeplyr
+* Source code: https://github.com/cran/treeplyr
+* Date/Publication: 2020-09-17 10:10:02 UTC
+* Number of recursive dependencies: 44
+
+Run `cloud_details(, "treeplyr")` for more info
+
+</details>
+
+## Error before installation
+
+### Devel
+
+```
+* using log directory ‘/tmp/workdir/treeplyr/new/treeplyr.Rcheck’
+* using R version 4.0.3 (2020-10-10)
+* using platform: x86_64-pc-linux-gnu (64-bit)
+* using session charset: UTF-8
+* using options ‘--no-manual --no-build-vignettes’
+* checking for file ‘treeplyr/DESCRIPTION’ ... OK
+* checking extension type ... Package
+* this is package ‘treeplyr’ version ‘0.1.10’
+* package encoding: UTF-8
+* checking package namespace information ... OK
+* checking package dependencies ... ERROR
+Packages required but not available: 'phytools', 'geiger'
+
+See section ‘The DESCRIPTION file’ in the ‘Writing R Extensions’
+manual.
+* DONE
+Status: 1 ERROR
+
+
+
+
+
+```
+### CRAN
+
+```
+* using log directory ‘/tmp/workdir/treeplyr/old/treeplyr.Rcheck’
+* using R version 4.0.3 (2020-10-10)
+* using platform: x86_64-pc-linux-gnu (64-bit)
+* using session charset: UTF-8
+* using options ‘--no-manual --no-build-vignettes’
+* checking for file ‘treeplyr/DESCRIPTION’ ... OK
+* checking extension type ... Package
+* this is package ‘treeplyr’ version ‘0.1.10’
+* package encoding: UTF-8
+* checking package namespace information ... OK
+* checking package dependencies ... ERROR
+Packages required but not available: 'phytools', 'geiger'
 
 See section ‘The DESCRIPTION file’ in the ‘Writing R Extensions’
 manual.
@@ -1340,11 +2014,11 @@ Status: 1 ERROR
 
 <details>
 
-* Version: 0.1.0
+* Version: 0.2.3
 * GitHub: NA
 * Source code: https://github.com/cran/vivid
-* Date/Publication: 2021-04-09 09:10:02 UTC
-* Number of recursive dependencies: 205
+* Date/Publication: 2021-11-20 01:30:02 UTC
+* Number of recursive dependencies: 202
 
 Run `cloud_details(, "vivid")` for more info
 
@@ -1361,13 +2035,13 @@ Run `cloud_details(, "vivid")` for more info
 * using session charset: UTF-8
 * using options ‘--no-manual --no-build-vignettes’
 * checking for file ‘vivid/DESCRIPTION’ ... OK
-* this is package ‘vivid’ version ‘0.1.0’
+* this is package ‘vivid’ version ‘0.2.3’
 * package encoding: UTF-8
 * checking package namespace information ... OK
 * checking package dependencies ... NOTE
 ...
-  Error: Test failures
-  Execution halted
+* checking tests ... OK
+  Running ‘testthat.R’
 * checking for unstated dependencies in vignettes ... OK
 * checking package vignettes in ‘inst/doc’ ... OK
 * checking running R code from vignettes ... NONE
@@ -1375,7 +2049,7 @@ Run `cloud_details(, "vivid")` for more info
   ‘vividQStart.Rmd’ using ‘UTF-8’... OK
 * checking re-building of vignette outputs ... SKIPPED
 * DONE
-Status: 1 ERROR, 2 NOTEs
+Status: 2 NOTEs
 
 
 
@@ -1391,13 +2065,13 @@ Status: 1 ERROR, 2 NOTEs
 * using session charset: UTF-8
 * using options ‘--no-manual --no-build-vignettes’
 * checking for file ‘vivid/DESCRIPTION’ ... OK
-* this is package ‘vivid’ version ‘0.1.0’
+* this is package ‘vivid’ version ‘0.2.3’
 * package encoding: UTF-8
 * checking package namespace information ... OK
 * checking package dependencies ... NOTE
 ...
-  Error: Test failures
-  Execution halted
+* checking tests ... OK
+  Running ‘testthat.R’
 * checking for unstated dependencies in vignettes ... OK
 * checking package vignettes in ‘inst/doc’ ... OK
 * checking running R code from vignettes ... NONE
@@ -1405,83 +2079,7 @@ Status: 1 ERROR, 2 NOTEs
   ‘vividQStart.Rmd’ using ‘UTF-8’... OK
 * checking re-building of vignette outputs ... SKIPPED
 * DONE
-Status: 1 ERROR, 2 NOTEs
-
-
-
-
-
-```
-# wrswoR
-
-<details>
-
-* Version: 1.1.1
-* GitHub: https://github.com/krlmlr/wrswoR
-* Source code: https://github.com/cran/wrswoR
-* Date/Publication: 2020-07-26 18:20:02 UTC
-* Number of recursive dependencies: 133
-
-Run `cloud_details(, "wrswoR")` for more info
-
-</details>
-
-## Error before installation
-
-### Devel
-
-```
-* using log directory ‘/tmp/workdir/wrswoR/new/wrswoR.Rcheck’
-* using R version 4.0.3 (2020-10-10)
-* using platform: x86_64-pc-linux-gnu (64-bit)
-* using session charset: UTF-8
-* using options ‘--no-manual --no-build-vignettes’
-* checking for file ‘wrswoR/DESCRIPTION’ ... OK
-* checking extension type ... Package
-* this is package ‘wrswoR’ version ‘1.1.1’
-* package encoding: UTF-8
-* checking package namespace information ... OK
-...
-* checking for GNU extensions in Makefiles ... OK
-* checking for portable use of $(BLAS_LIBS) and $(LAPACK_LIBS) ... OK
-* checking use of PKG_*FLAGS in Makefiles ... OK
-* checking compiled code ... OK
-* checking examples ... OK
-* checking for unstated dependencies in ‘tests’ ... OK
-* checking tests ... OK
-  Running ‘testthat.R’
-* DONE
-Status: 1 NOTE
-
-
-
-
-
-```
-### CRAN
-
-```
-* using log directory ‘/tmp/workdir/wrswoR/old/wrswoR.Rcheck’
-* using R version 4.0.3 (2020-10-10)
-* using platform: x86_64-pc-linux-gnu (64-bit)
-* using session charset: UTF-8
-* using options ‘--no-manual --no-build-vignettes’
-* checking for file ‘wrswoR/DESCRIPTION’ ... OK
-* checking extension type ... Package
-* this is package ‘wrswoR’ version ‘1.1.1’
-* package encoding: UTF-8
-* checking package namespace information ... OK
-...
-* checking for GNU extensions in Makefiles ... OK
-* checking for portable use of $(BLAS_LIBS) and $(LAPACK_LIBS) ... OK
-* checking use of PKG_*FLAGS in Makefiles ... OK
-* checking compiled code ... OK
-* checking examples ... OK
-* checking for unstated dependencies in ‘tests’ ... OK
-* checking tests ... OK
-  Running ‘testthat.R’
-* DONE
-Status: 1 NOTE
+Status: 2 NOTEs
 
 
 

@@ -1,5 +1,15 @@
 # dplyr (development version)
 
+* dplyr now uses `rlang::check_installed()` to prompt you whether to install
+  required packages that are missing.
+
+* `mutate(.keep = "none")` is no longer identical to `transmute()`.
+  `transmute()` has not been changed, and completely ignores the column ordering
+  of the existing data, instead relying on the ordering of expressions
+  supplied through `...`. `mutate(.keep = "none")` has been changed to ensure
+  that pre-existing columns are never moved, which aligns more closely with the
+  other `.keep` options (#6086).
+
 * `cur_data()` and `cur_data_all()` don't simplify list columns in rowwise data frames (#5901).
 
 * `storms` data updated to 2020 (@steveharoz, #5899).
@@ -14,6 +24,8 @@
    and `slice_sample()`) now accept negative values for `n` and `prop` (#5961).
 
 * `slice()` now indicates which group produces an error (#5931).
+
+* Better display of error messages thanks to rlang 1.0.0.
 
 # dplyr 1.0.7
 
@@ -1185,7 +1197,7 @@ mtcars2
 
 This is particularly useful if you want to perform non-SELECT queries as you can do whatever you want with `DBI::dbGetQuery()` and `DBI::dbExecute()`.
 
-If you've implemented a database backend for dplyr, please read the [backend news](https://github.com/tidyverse/dbplyr/blob/master/NEWS.md#backends) to see what's changed from your perspective (not much). If you want to ensure your package works with both the current and previous version of dplyr, see `wrap_dbplyr_obj()` for helpers.
+If you've implemented a database backend for dplyr, please read the [backend news](https://github.com/tidyverse/dbplyr/blob/main/NEWS.md#backends) to see what's changed from your perspective (not much). If you want to ensure your package works with both the current and previous version of dplyr, see `wrap_dbplyr_obj()` for helpers.
 
 ## UTF-8
 

@@ -1,34 +1,65 @@
 # Revdeps
 
-## Failed to check (21)
+## Failed to check (29)
 
 |package        |version |error |warning |note |
 |:--------------|:-------|:-----|:-------|:----|
-|bayesdfa       |1.1.0   |1     |        |     |
+|bayesmodels    |?       |      |        |     |
 |CausalImpact   |?       |      |        |     |
-|CB2            |?       |      |        |     |
 |cbar           |?       |      |        |     |
-|diceR          |?       |      |        |     |
-|glmmfields     |0.1.4   |1     |        |     |
+|DAISIE         |?       |      |        |     |
+|ecocomDP       |?       |      |        |     |
+|galah          |?       |      |        |     |
+|idiogramFISH   |?       |      |        |     |
+|loon.ggplot    |?       |      |        |     |
 |loon.shiny     |?       |      |        |     |
 |MarketMatching |?       |      |        |     |
-|metagam        |?       |      |        |     |
-|mlbstatsR      |0.1.0   |1     |        |     |
-|pencal         |?       |      |        |     |
-|rabhit         |?       |      |        |     |
+|metacoder      |?       |      |        |     |
+|myTAI          |?       |      |        |     |
+|nodeSub        |?       |      |        |     |
+|phyr           |?       |      |        |     |
+|Platypus       |?       |      |        |     |
+|pmc            |?       |      |        |     |
+|Rarefy         |?       |      |        |     |
 |raw            |?       |      |        |     |
-|rmdcev         |1.2.4   |1     |        |     |
-|rstap          |1.0.3   |1     |        |     |
-|scoper         |?       |      |        |     |
+|rbison         |?       |      |        |     |
+|RevGadgets     |?       |      |        |     |
+|RNeXML         |?       |      |        |     |
+|rnoaa          |?       |      |        |     |
+|SPLICE         |?       |      |        |     |
 |SynthETIC      |?       |      |        |     |
-|tigger         |?       |      |        |     |
-|trackr         |?       |      |        |     |
+|taxizedb       |?       |      |        |     |
+|TR8            |?       |      |        |     |
+|traits         |?       |      |        |     |
+|treeplyr       |?       |      |        |     |
 |vivid          |?       |      |        |     |
-|wrswoR         |?       |      |        |     |
 
-## New problems (1)
+## New problems (24)
 
-|package                  |version |error  |warning |note |
-|:------------------------|:-------|:------|:-------|:----|
-|[imfr](problems.md#imfr) |0.1.9.1 |__+1__ |        |     |
+|package                                |version |error  |warning |note |
+|:--------------------------------------|:-------|:------|:-------|:----|
+|[dtplyr](problems.md#dtplyr)           |1.1.0   |__+2__ |        |     |
+|[dynplot](problems.md#dynplot)         |1.1.1   |__+1__ |        |     |
+|[ergm.ego](problems.md#ergmego)        |1.0.0   |       |__+1__  |     |
+|[excluder](problems.md#excluder)       |0.3.2   |__+2__ |        |     |
+|[gestalt](problems.md#gestalt)         |0.1.8   |__+1__ |        |     |
+|[immunarch](problems.md#immunarch)     |0.6.7   |__+1__ |        |2    |
+|[keyholder](problems.md#keyholder)     |0.1.5   |__+1__ |        |     |
+|[mcp](problems.md#mcp)                 |0.3.1   |__+1__ |        |     |
+|[microeco](problems.md#microeco)       |0.6.0   |       |__+1__  |2    |
+|[MoMPCA](problems.md#mompca)           |1.0.1   |__+1__ |        |1    |
+|[motif](problems.md#motif)             |0.5.0   |__+1__ |        |1    |
+|[multidplyr](problems.md#multidplyr)   |0.1.0   |__+1__ |        |1    |
+|[nofrills](problems.md#nofrills)       |0.3.1   |__+2__ |        |     |
+|[pammtools](problems.md#pammtools)     |0.5.7   |__+1__ |        |     |
+|[PPforest](problems.md#ppforest)       |0.1.2   |__+1__ |        |1    |
+|[prider](problems.md#prider)           |1.0.2   |__+1__ |        |     |
+|[PVplr](problems.md#pvplr)             |0.1.0   |__+1__ |        |1    |
+|[ruler](problems.md#ruler)             |0.2.4   |__+2__ |        |     |
+|[shinymodels](problems.md#shinymodels) |0.1.0   |       |__+1__  |1    |
+|[testdat](problems.md#testdat)         |0.3.0   |__+1__ |        |     |
+|[tidyMicro](problems.md#tidymicro)     |1.47    |__+2__ |        |1    |
+|[tidyquery](problems.md#tidyquery)     |0.2.2   |__+1__ |        |     |
+|[timetk](problems.md#timetk)           |2.6.2   |__+1__ |        |1    |
+|[tsibble](problems.md#tsibble)         |1.1.0   |__+1__ |        |     |
 
